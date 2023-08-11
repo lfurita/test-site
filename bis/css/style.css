@@ -1,0 +1,368 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+/* 
+   v1.0 | 20220516
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0;
+	font-size: 100%; font: inherit; font-family: 'Noto Sans KR', 'NanumSquare', 'Malgun Gothic', "맑은고딕", Dotum, sans-serif; line-height: 110%; letter-spacing: -.0313rem; color: var(--color-black);
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+html, body {
+  width: 100%; height: 100vh;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+div { display: block }
+article, aside, footer, header, hgroup, main, nav, section { display: block }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+address { display: block; }
+figcaption { display: block }
+hr {
+  display: block; overflow: hidden;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em; margin-block-end: 0.5em; margin-inline-start: auto; margin-inline-end: auto;
+  border-style: inset; border-width: 1px
+}
+map {
+  display: inline
+}
+img, video {
+  height: auto;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+}
+video {
+  object-fit: contain;
+}
+video:-webkit-full-page-media {
+  margin: auto; position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  max-height: 100%; max-width: 100%;
+}
+img {
+  border-style: none;
+}
+button {
+  background: none;
+  border: 0;
+}
+strong {
+  font-weight: 700; line-height: 140%;
+}
+p {
+  font-size: var(--fS-text-02); font-weight: 400;
+  word-break: keep-all;
+}
+
+/* form elements */
+form {
+  display: block;
+  margin-top: 0__qem;
+}
+:-webkit-any(table, thead, tbody, tfoot, tr) > form:-internal-is-html {
+  display: none !important;
+}
+label {
+  cursor: default;
+}
+legend {
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border: none
+}
+select { 
+  border-radius:0;          /* 아이폰 사파리 보더 없애기 */ 
+  -webkit-appearance:none;  /* 화살표 없애기 for chrome*/ 
+     -moz-appearance:none;  /* 화살표 없애기 for firefox*/ 
+          appearance:none   /* 화살표 없애기 공통*/ 
+}
+
+.clearfix:after {
+  content: " "; 
+  display: block; 
+  clear: both;
+}
+
+.inb {
+  font-size: 0%;
+}
+.inb > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h2 {
+  font-size: var(--fS-title-3); 
+  font-weight: 700; 
+  word-break: keep-all;
+}
+h3 {
+  font-size: var(--fS-title-2-55); 
+  font-weight: 700; 
+  word-break: keep-all;
+}
+h3.eng {
+  font-family: 'Playfair Display', serif; 
+  font-weight: 400; 
+  word-break: keep-all;
+}
+.eng {
+  font-family: 'Playfair Display', serif;
+}
+
+/******************************************************************
+           input & textarea Style Css 
+***********************/
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
+textarea {
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+  outline: none; 
+  font-family: sans-serif;
+}
+/* PLACEHOLDER */
+::-webkit-input-placeholder { color: #aaa; }
+     :-ms-input-placeholder { color: #aaa; }
+         ::-moz-placeholder { color: #aaa; }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent; }
+          input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+                  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+  vertical-align: middle;
+  outline: none; border:none;
+  border-radius: 0;
+}
+input:focus {
+  border-color: var(--color-red);
+}
+.input01 {
+  width: 100%; height: 42px; line-height: 40px;
+}
+.input02 {
+  width: calc(100% - 15px); height: 42px; line-height: 40px;
+  border:1px solid var(--color-light-gray); border-radius: 3px;
+  padding-left: 15px;
+}
+
+/******************************************************************
+           selectBox Style Css 
+***********************/
+select {
+  -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+     -moz-appearance: none;
+          appearance: none;
+  background: url('') no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ 
+  background-size: 14px;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+  display: none;
+}
+select {
+  padding: 0 0 1px;
+  border: 0; border-radius: 0;
+  width: 100%;
+  font-weight: 400;
+  cursor: pointer;
+}
+select:focus, select:active {
+  outline: 0;
+  border-color: var(--color-red);
+}
+
+.select-box {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%; height: 42px; line-height: 40px;
+  background-color: var(--color-white);
+  border-radius: 3px; border: 1px solid var(--color-light-gray);
+  cursor: pointer;
+}
+.select-box select {
+  line-height: 40px;
+  width: 100%; padding-left: 15px;
+}
+.select-box:before {
+  content: '';
+  width: 35px;
+  position: absolute; top: 0px; right: 0px; bottom: 0px;
+  background: var(--color-snow);
+  border-radius: 0 5px 5px 0;
+  pointer-events: none;
+}
+.select-box:after {
+  content: '';
+  position: absolute; top: 0; right: 8px; bottom: 0;
+  background: url('../img/common/icon-arrow.svg') no-repeat; background-size: 100%;
+  width: 14px; height: 14px;
+  margin: auto;
+  pointer-events: none;
+}
+.select-box:hover {
+  border: 1px solid var(--color-red);
+}
+.select-box:hover:after {
+  background: url('../img/common/icon-arrow-hover.svg') no-repeat;
+}
+
+
+
+/******************************************************************
+           checkbox Style Css 
+***********************/
+label.checkbox {
+  position: relative;
+  padding: 0 0 0 28px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+label.checkbox input[type="checkbox"] {
+  display: none;
+}
+label.checkbox input[type="checkbox"]:checked + span {
+  opacity: 1;
+}
+label.checkbox::before {
+  position: absolute;
+  content: '';
+  top: 3px;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border-radius: 2px;
+  border: 2px solid #00A0DF;
+}
+label.checkbox span {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 12px;
+  height: 5px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+label.checkbox span::before {
+  position: absolute;
+  content: '';
+  left: 11px;
+  width: 3px;
+  height: 11px;
+  background-color: #00A0DF;
+}
+label.checkbox span::after {
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 7px;
+  width: 4px;
+  height: 3px;
+  background-color: #00A0DF;
+}
+
+
+
+/******************************************************************
+           root Style Css 
+***********************/
+:root {
+  /* color style */
+  --point-color: #2498CC;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #898989;
+  --color-light-gray: #d8d8d8;
+  --color-silver: #c2c2c2;
+  --color-gainsboro: #aeaeae;
+  --color-light-silver: #EFEFEF;
+  --color-snow: #f2f2f2;
+  --color-red: #EA0303;
+  --color-blue: #0B69F6;
+  --color-sky: #2297CC;
+  --color-azure: #f1f5fa; /* F0FFFF */
+  --color-navy: #16468D;
+
+  /* widht */
+  --width-first: 100%;
+  --width-second: 49%;
+  --width-third: 32%;
+  
+  /* font family style */
+  --ffam-noto: 'Noto Sans KR', sans-serif;
+  --ffam-nanuSQ: 'NanumSquare', sans-serif;
+
+  /* font size style */
+  --fS-txt-00: 0rem;
+
+  --fS-title-5: 5rem;
+  --fS-title-4: 4rem;
+  --fS-title-3: 3rem;
+  --fS-title-2-55: 2.55rem;
+  --fS-title-2: 2rem;
+  --fS-title-1-55: 1.55rem;
+  --fS-title-1-25: 1.25rem;
+  --fS-title-1-125: 1.125rem;
+
+  --fS-text-1-05: 1.05rem;
+  --fS-text-1: 1rem;
+  --fS-text-95: .95rem;
+  --fS-text-875: .875rem;
+  --fS-text-8: .8rem;
+  --fS-text-75: .75rem;
+  --fS-text-7: .7rem;
+
+  /* Height Row size style */
+  --row-075: .75rem;
+  --row-1: 1rem;
+  --row-1-55: 1.55rem;
+  --col-1: 1rem;
+}
+
+
+/*********************************************************************************************
+              Mobile Style css
+                        *** 700미만 style ***
+*****************************/
+@media only screen and (max-width:699px) and (min-width:280px){
+  /********************** Mobile 해상도 공통 css */
+  p {
+	line-height: 1.2;
+  }
+  h2 {
+	text-align: center;
+  }
+}

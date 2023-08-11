@@ -1,0 +1,324 @@
+/*********************************************************************************************
+              Mobile Style css
+                        *** 700미만 style ***
+*****************************/
+@media only screen and (max-width:699px) and (min-width:280px){
+  /********************** Mobile 해상도 공통 css */
+  .mainVisual .swiper .swiper-slide .main-visual-txt-inner {
+    position: absolute; top: 0; eft: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    top: 70%;
+	background-size: 100%;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 5%;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 5%;
+  }
+  :root {
+    --swiper-navigation-size: 28px;
+  }
+  .mainVisual .swiper .swiper-slide .main-visual-txt-inner strong {
+    font-size: var(--fS-title-2-55);
+	line-height: 1;
+  }
+  .mainVisual .swiper .swiper-slide .main-visual-txt-inner .txtCopyright {
+    font-size: var(--fS-text-95);
+    line-height: 140%;
+  }
+
+  /********************************************************* 보험 서비스 */
+  .service .title-wrap {
+    height: 140px;
+    background: #16468D url(../img/mobile/back-pattern-White.png) no-repeat 50% 50%;
+	background-size: cover;
+  }
+  .service .title-wrap h2 {
+    font-size: var(--fS-title-1-55);
+  }
+  .service .title-wrap > p {
+    font-size: var(--fS-text-95);
+	width: 90%; line-height: 1.2; text-align: center;
+	padding: 0 5%;
+	word-break: keep-all;
+  }
+  .service .company-wrap {
+    position: relative;
+	display: block;
+	height: 195px;
+  }
+  .service .company-wrap > .box-list {
+	height: 100%;
+  }
+  .service .company-wrap > .box-list .box-main-img {
+    background-size: cover;
+  }
+  .service .company-wrap > .box-list .box-text-inner {
+	width: 100%; height: 100%;
+  }
+  .service .company-wrap > .box-list .box-text-inner .text-con {
+    padding: 2rem 1rem 0;
+  }
+  .service .company-wrap > .box-list .box-text-inner .text-con h3 {
+    font-size: var(--fS-title-1-25);
+  }
+  .service .company-wrap > .box-list .box-text-inner .text-con p {
+    padding-top: .75rem;
+    font-size: var(--fS-text-75); font-weight: 300;
+	line-height: 1.2;
+	word-break: keep-all;
+  }
+  .service .company-wrap > .box-list .box-text-inner .text-con a {
+	margin-top: 1.55rem;
+  }
+  .service .company-wrap > .box-list .box-text-inner .text-con .moreMain.large-58 {
+	width: 80%; height: 38px; line-height: 38px;
+	font-size: var(--fS-text-75);
+  }
+  .service .service-col-wrap {
+	height: 390px;
+  }
+  .service .service-col-wrap > .box-list {
+    display: block;
+    width: 100%; height: 195px;
+  }
+  .service .service-col-wrap > .box-list > ul > li,
+  .service .service-col-wrap > .box-list > ul > li.box-main-img {
+    height: 195px;
+  }
+  .box-list > ul > li.box-text-inner a .text-con {
+    width: calc(100% - 10%); height: calc(100% - 2rem);
+    padding: 0 5% 2rem;
+  }
+  .box-list > ul > li.box-text-inner a .text-con p {
+    font-size: var(--fS-text-75);
+  }
+  .box-list > ul > li.box-text-inner a .text-con strong.link-more {
+    height: 42px; line-height: 42px;
+    font-size: var(--fS-title-1-25);
+  }
+  .box-list > ul > li.box-text-inner a .text-con strong.link-more span.icon-arow-more {
+	display: none;
+  }
+  .box-list > ul > li.box-main-img figure > img {
+	width: auto; height: 100%;
+	transform: translateX(-50%);
+  }
+  .service .service-col-wrap > .box-list > ul > li.box-main-img figure > img {
+    transform: translateX(0%);
+	height: 100%; width: auto;
+  }
+  .box-list:hover > ul > li.box-main-img figure > img {
+	transform: scale(1,1);
+  }
+  .service .service-wide-wrap {
+    width: 100%; height: 390px;
+  }
+  .service-wide-wrap > .box-list {
+    height: 195px;
+  }
+  .service-wide-wrap > .box-list ul li {
+    width: 50%; height: 195px;
+  }
+  .service-wide-wrap > .box-list > ul > li.box-text-inner {
+    background-color: #e0faff;
+  }
+  .service-wide-wrap > .box-list:hover > ul > li.box-main-img figure > img {
+    transform: scale(1,1) translateX(-50%);
+  }
+
+  /********************************************************* 비지니스 area */
+  .business .title-wrap {
+    height: 140px;
+    background: #0B69F6 url(../img/mobile/back-pattern-White.png) no-repeat 50% 50%;
+	background-size: cover;
+  }
+  .business .title-wrap h2 {
+    font-size: var(--fS-title-1-55);
+  }
+  .business .title-wrap > p {
+    font-size: var(--fS-text-95);
+	width: 90%; line-height: 1.4; text-align: center;
+	padding: 0 5%;
+	word-break: keep-all;
+  }
+  .business .brand-wrap {
+	height: 585px;
+  }
+  .business .brand-wrap .box-row-list {
+    display: inline-block;
+    width: 50%;
+    height: 195px;
+  }
+  .business .brand-wrap .box-row-list figure, .business .brand-wrap .box-col-list .box-col-img figure {
+	overflow: hidden;
+  }
+  .business .brand-wrap .box-row-list figure img {
+    height: auto; width: 100%;
+  }
+  .business .brand-wrap .box-col-list .box-col-img figure img {
+    height: 100%; width: auto;
+  }
+  .business .brand-wrap .box-col-list {
+    display: block;
+    width: 100%; height: 390px;
+  }
+  .box-col-list .box-col-img {
+    height: 195px;
+  }
+  .box-col-list .box-col-inner {
+    height: 195px;
+  }
+  .box-col-list .box-col-inner .text-con {
+    width: calc(100% - 10%); height: calc(100% - 2rem);
+    padding: 0 5% 2rem;
+  }
+  .box-col-list .box-col-inner .text-con a strong.link-more span.icon-arow-more {
+    display: none;
+  }
+  .box-col-list .box-col-inner .text-con a.link-site {
+    display: block;
+	width: 100%;
+  }
+
+  /********************************************************* 구성원 area */
+  .people .title-wrap {
+    height: 173px;
+    background: #efefef url(../img/mobile/back-pattern-Gray.png) no-repeat 50% 50%;
+	background-size: cover;
+  }
+  .people .title-wrap strong {
+    font-size: 5rem;
+    line-height: 0.2;
+	margin-top: 1rem;
+  }
+  .people .title-wrap h2 {
+    font-size: var(--fS-title-1-25);
+	width: 90%;
+    margin: 0 auto;
+  }
+  .people .title-wrap > p {
+    font-size: var(--fS-text-75);
+    margin-top: .75rem;
+  }
+  .people .memb-peop-wrap > ul li {
+    float: left;
+    width: 50%; height: 250px;
+  }
+  .people .memb-peop-wrap > ul li a {
+    height: calc(100% - 3rem);
+    padding-top: 3rem;
+  }
+  .people .memb-peop-wrap > ul li a figure {
+    width: 100px; height: 100px;
+  }
+  .people .memb-peop-wrap > ul li a figure img {
+    width: 100%; height: auto;
+  }
+  .people .memb-peop-wrap > ul li a strong {
+    font-size: var(--fS-text-875);
+    margin-top: 1.25rem;
+  }
+  .people .memb-peop-wrap > ul li a h3 {
+    display: block;
+    font-size: var(--fS-title-1-125);
+    margin-top: .55rem;
+  }
+  .people .memb-peop-wrap > ul li:nth-child(4), 
+  .people .memb-peop-wrap > ul li:nth-child(5){
+    background-color: var(--color-snow);
+  } 
+  .people .memb-peop-wrap > ul li:nth-child(3), 
+  .people .memb-peop-wrap > ul li:nth-child(6) {
+    background-color: var(--color-gainsboro);
+  }
+  .people .memb-peop-wrap > ul li a:hover .peop-hover-area {
+    display: none;
+  }
+
+
+
+  /********************************************************* 협력사 area */
+  section.partners {
+    background: #fff url('../img/mobile/back-pattern-partners.png?ts') no-repeat;
+	background-size: 100%;
+  }
+  .partners .title-wrap h2 {
+    font-size: var(--fS-title-1-55);
+  }
+  .partners .title-wrap p {
+    font-size: var(--fS-text-75);
+    margin-top: .75rem;
+  }
+  .partners .title-wrap {
+    width: 100%; height: 120px;
+  }
+  .partners .logo-wrap > ul {
+    width: 90%;
+    margin: 0rem auto 2rem;
+	box-shadow: 0 0 7px 0 rgb(0 0 0 / 10%);
+  }
+  .partners .logo-wrap > ul li {
+	width: 20%;
+  }
+  .partners .logo-wrap > ul li img {
+	width: 100%;
+  }
+
+  
+  /********************************************************* 문의 area */
+  section.inquiry {
+    width: 100%; height: 420px;
+  }
+  .inquiry .inqu-box-area {
+	position: relative;
+	width: 100%; height: 100%;
+	margin: 0 0;
+  }
+  .inquiry .inqu-box-area .box-contact-inner {
+    top: 220px;
+	width: 100%; height: 200px;
+  }
+  .inquiry .inqu-box-area .box-text-inner {
+    display: block;
+    width: 100%; height: 220px;
+  }
+  .inquiry .inqu-box-area .box-text-inner .text-con {
+    width: calc(100% - -28%);
+    height: 100%;
+    background: url('../img/main/icon-registration.png?tv') bottom right no-repeat;
+	background-size: 50%;
+  }
+  .inquiry .inqu-box-area .box-text-inner .text-con h3 {
+    font-size: var(--fS-title-1-55);
+	width: 90%;
+	padding-left: 5%;
+  }
+  .inquiry .inqu-box-area .box-text-inner .text-con p {
+    font-size: var(--fS-text-75);
+    margin-top: .75rem;
+	width: 65%;
+	padding-left: 5%;
+  }
+  .inquiry .inqu-box-area .box-contact-inner .text-con {
+    width: calc(100%- 2rem);
+    height: 100%;
+    padding-right: 2rem;
+  }
+  .inquiry .inqu-box-area .box-contact-inner .text-con strong {
+    font-size: var(--fS-title-2-55);
+	line-height: 1;
+	margin-top: .55rem;
+  }
+  .inquiry .inqu-box-area .box-contact-inner .text-con a.navy.large-48 {
+    width: 150px;
+	font-size: var(--fS-text-75);
+    margin-top: 1rem;
+  }
+}
