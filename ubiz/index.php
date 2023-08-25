@@ -833,7 +833,7 @@ include $_SERVER['DOCUMENT_ROOT']."/ubiz/include/header.php";
                                 <i class="icon-best"></i>
                                 <span>개인정보배상책임보험</span>
                             </h3>
-                            <p>저장하고 있는 고객의 개인정보를  잃어버리거나 누군가 훔쳐가거나 잘못된 내용으로 바뀌어버리는 등 우연히 생긴 사고로 인해 고객에게 피해가 발생할 경우 이를 보상</p>
+                            <p>저장하고 있는 고객의 개인정보를  잃어버리거나 누군가 훔쳐가거나 잘못된  내용으로 바뀌어버리는 등 우연히 생긴  사고로 인해 고객에게 피해가 발생할 경우  이를 보상</p>
                             <div class="btn-bottom">
                                 <a href="#" class="button more">자세히</a>
                                 <a href="#" class="button counsel">상담하기</a>

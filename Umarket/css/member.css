@@ -1,0 +1,290 @@
+
+/********************************************************************
+              login area
+********************************************************************/
+.member-wrap {
+  margin: 62px 5% 0;
+  width: 96%;
+}
+.member-wrap .logo-item {
+  position: relative;
+  padding-top: 70px;
+}
+.member-wrap .logo-item > figure {
+  display: flex; justify-content: center; align-items: center;
+  width: 70px; height: 70px;
+  border-radius: 100%;
+  background-color: var(--color-point);
+}
+.member-wrap > h2 {
+  font-size: var(--font-size-32); font-weight: 700;
+  margin-top: 30px;
+}
+.member-wrap > h2.title {
+  margin-top: 92px;
+}
+.member-wrap > p.cont-explain {
+  font-size: var(--font-size-18); font-weight: 400; color: var(--color-fontGray);
+  padding-top: 10px;
+}
+.member-wrap .inp-box-wrap {
+  margin-top: 80px;
+}
+.member-wrap .inp-box-wrap > ul {
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.member-wrap .inp-box-wrap > ul li {
+  position: relative;
+  width: 100%; height: 58px;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.member-wrap .inp-box-wrap > ul li:first-child {
+  margin-top: 0;
+}
+.member-wrap .inp-box-wrap > ul li > div {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+}
+.member-wrap .inp-box-wrap > ul li > div > strong {
+  line-height: 4.5;
+  font-size: var(--font-size-16); font-weight: 500;
+}
+.member-wrap .inp-box-wrap > ul li > div > input {
+  width: 70%; height: 28px;
+  font-size: var(--font-size-18); font-weight: 500;
+  text-align: right;
+}
+.member-wrap .inp-box-wrap > ul li > .password > input {
+  padding-right: 10%;
+}
+.member-wrap .inp-box-wrap > ul li > div > .eyes-item {
+  position: absolute; top: 20px; bottom: 0; right: 0;
+  display: flex; justify-content: center; align-items: center;
+  width: 26px; height: 26px;
+  background-color: var(--color-snow); border-radius: 100%;
+  cursor: pointer;
+}
+.member-wrap .inp-box-wrap > ul li > div > .eyes-item i {
+  width: 20px; height: 20px;
+  background-color: var(--color-fontColor);
+}
+.member-wrap .bottom-text-wrap {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+  margin-top: 35px;
+}
+.member-wrap .bottom-text-wrap  > div {
+  width: auto;
+}
+.member-wrap .bottom-text-wrap .pw-item > a,
+.member-wrap .bottom-text-wrap .signup-item,
+.member-wrap .bottom-text-wrap .signup-item > a {
+  font-size: var(--font-size-14); font-weight: 400;
+}
+.member-wrap .bottom-text-wrap .pw-item > a {
+  text-decoration: underline;
+  color: var(--color-fontGray);
+}
+.member-wrap .bottom-text-wrap .signup-item {
+  text-align: right;
+}
+.member-wrap .bottom-text-wrap .signup-item > a {
+  font-size: var(--font-size-16);
+  color: var(--color-point); font-weight: 700;
+  margin-left: 7px;
+}
+
+/********************************************************************
+              Sign Up area
+********************************************************************/
+/********************************** 1단계 style css **/
+.inp-box-first {
+  margin-top: 50px;
+}
+.inp-box-first > ul {
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.inp-box-first > ul li {
+  position: relative;
+  width: 100%; min-height: 58px;
+  margin-top: 20px;
+}
+.inp-box-first > ul li:first-child {
+  margin-top: 0;
+}
+.inp-box-first > ul li > .email, .inp-box-first > ul li > .password,
+.inp-box-first > ul li > .password-confirm {
+  position: relative;
+  width: 100%; height: 58px;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.inp-box-first > ul li > div > strong {
+  position: absolute; bottom: 15px; left: 0;
+  font-size: var(--font-size-16); font-weight: 500;
+}
+.inp-box-first > ul li > div > input {
+  height: 28px; width: auto;
+  font-size: var(--font-size-16); font-weight: 400;
+  text-align: right;
+  margin: 20px 0% 0 10%;
+}
+.inp-box-first > ul li > .email > input {
+  width: 75%;
+  margin: 20px 0 0 60px;
+}
+.inp-box-first > ul li > .password > input {
+  width: 68%;
+  margin: 20px 0 0 85px;
+}
+.inp-box-first > ul li > .password-confirm > input {
+  width: 54%;
+  margin: 20px 0 0 140px;
+}
+.inp-box-first > ul li.member-input-error {
+  border-color: var(--color-red);
+}
+.inp-box-first > ul li > div > .eyes-item {
+  position: absolute; top: 20px; bottom: 0; right: 0;
+  display: flex; justify-content: center; align-items: center;
+  width: 26px; height: 26px;
+  background-color: var(--color-snow); border-radius: 100%;
+  cursor: pointer;
+}
+.inp-box-first > ul li > div > .eyes-item i {
+  width: 20px; height: 20px;
+  background-color: var(--color-fontColor);
+}
+.inp-box-first > ul li > .email > .check-item {
+  position: absolute; top: 20px; bottom: 0; right: 0;
+  display: flex; justify-content: center; align-items: center;
+  width: 26px; height: 26px;
+}
+.inp-box-first > ul li > .email > .check-item i {
+  width: 20px; height: 20px;
+  background-color: var(--color-fontSilver);
+}
+.inp-box-first > ul li > .email > .check-item i.active {
+  background-color: var(--color-point);
+}
+.inp-box-first > ul li > .email > .check-item i.error {
+  background-color: var(--color-red);
+}
+
+/********************************** Error style css **/
+.inp-box-first > ul li > .member-input-error {
+  border-color: var(--color-red);
+}
+.inp-box-first > ul li > .member-input-error > strong,
+.inp-box-first > ul li > .member-input-error > input {
+  color: var(--color-red);
+}
+.inp-box-first > ul li > .member-input-error > div i {
+  background-color: var(--color-red);
+}
+.inp-box-first > ul li > .member-text-error {
+  display: flex;
+  flex-direction: row; align-items: center;
+  margin-top: 10px;
+  font-size: var(--font-size-16); font-weight: 500;
+  color: var(--color-red);
+}
+.inp-box-first > ul li > .member-text-error i.icon-error {
+  display: block;
+  width: 22px; height: 22px; margin-right: 5px;
+  border-radius: 100%; background-color: var(--color-red);
+}
+.text-cont-wrap {
+  margin: 35px 20% 0 0;
+}
+.text-cont-wrap > p {
+  font-size: var(--font-size-16); font-weight: 400;
+  color: var(--color-fontGray);
+  word-break: keep-all;
+}
+.text-cont-wrap > p > .accent {
+  color: var(--color-red); font-weight: 600;
+}
+.text-cont-wrap > p > a {
+  display: inline-block;
+  color: var(--color-point); font-weight: 500;
+  text-decoration: underline;
+}
+/********************************** 2단계 style css **/
+.inp-box-second {
+  margin-top: 30px;
+}
+.inp-box-second > h3 {
+  margin-top: 50px;
+  font-size: var(--font-size-20); font-weight: 700;
+}
+.inp-box-second > h3.first {
+  margin-top: 0;
+}
+.inp-box-second > ul {
+  display: flex; flex-direction: column; align-items: flex-start;
+  margin-top: 0px;
+}
+.inp-box-second > ul li {
+  position: relative;
+  width: 100%; min-height: 58px;
+  margin-top: 20px;
+}
+.inp-box-second > ul li:first-child {
+  margin-top: 0;
+}
+.inp-box-second > ul li > div {
+  display: flex;
+  flex-direction: row; justify-content: space-between;
+  width: 100%; height: 58px;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.inp-box-second > ul li > div strong {
+  font-size: var(--font-size-16); font-weight: 6500;
+  color: var(--color-point);
+  line-height: 4.5;
+}
+.inp-box-second > ul li > div input {
+  width: 70%;
+  font-size: var(--font-size-16); font-weight: 400;
+  text-align: right;
+}
+.inp-box-second > ul li > div .select-box {
+  width: 70%; height: 28px;
+  border-radius: 0px; border: 0px;
+  margin-top: 25px;
+}
+.inp-box-second > ul li > div .select-box:before {
+  content: '';
+  display: none;
+}
+.inp-box-second > ul li > div .select-box:after {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: 18px; height: 18px;
+  -webkit-mask: url('../img/common/icon-select-arrow.svg') no-repeat center;
+          mask: url('../img/common/icon-select-arrow.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+.inp-box-second > ul li > div .select-box > select {
+  height: 100%; width: calc(100% - 15px);
+  padding-right: 15px;
+  font-size: var(--font-size-16); font-weight: 500;
+  text-align: right; line-height: 2;
+}
+
+
+/********************************************************************
+              Common style css
+********************************************************************/
+.member-wrap .btn-box-wrap.first {
+  margin-top: 50%;
+}
+.member-wrap .btn-box-wrap.second {
+  margin-top: 15%;
+}
+.member-wrap .btn-box-wrap .point {
+  display: flex; justify-content: center; align-items: center;
+  height: 48px; width: 100%;
+  color: var(--color-white);
+  box-shadow: none;
+}

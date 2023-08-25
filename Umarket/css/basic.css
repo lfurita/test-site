@@ -1,0 +1,282 @@
+
+/********************************************************************
+              header area
+********************************************************************/
+header {
+  position: fixed; top: 0; left: 0; z-index: 99;
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 62px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
+  background-color: var(--color-white);
+  padding: 0 5%;
+}
+header .naming {
+  display: flex; flex-direction: row; align-items: center;
+  font-size: var(--font-size-20); font-weight: 700;
+}
+header .naming a.logo {
+  display: block;
+  height: 30px; width: auto;
+  margin-left: 5%;
+}
+header .naming a.logo > img {
+  font-size: 0;
+}
+header .naming > img {
+  width: auto; height: 100%;
+}
+header .naming > a.title {
+  display: flex;
+  width: 18px; height: 18px;
+  margin-right: 10px;
+  background-color: var(--color-fontColor);  
+  -webkit-mask: url('../img/common/icon-top-prev.svg') right no-repeat;
+          mask: url('../img/common/icon-top-prev.svg') right no-repeat;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+header .naming > span {
+  margin-right: 5px;
+}
+header .icon-menu-wrap {
+  display: flex;
+  flex-direction: row; justify-content: flex-end; align-items: center;
+  width: 50%;
+  text-align: right;
+}
+header .icon-menu-wrap i {
+  width: 22px; height: 22px;
+  display: flex;
+  justify-content: center; align-items: center;
+  background-color: var(--color-fontColor);
+  margin-left: 7%;
+  font-size: 0;
+}
+
+
+/********************************************************************
+              footer area style cee
+********************************************************************/
+footer {
+  padding-bottom: 100px;
+  width: 100%;
+  background-color: var(--color-white);
+}
+footer .foot-menu {
+  display: flex; 
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;
+  border-top: 1px solid var(--color-ligthGray); border-bottom: 1px solid var(--color-ligthGray);
+  padding: 20px 0;
+}
+footer .foot-menu > a {
+  position: relative;
+  display: flex; align-items: center;
+  margin-left: 5%; padding-right: 5%;
+  font-size: var(--font-size-14); font-weight: 600;
+}
+footer .foot-menu > a i.icon-arrow {
+  content: "";
+  position: absolute; top: 50%; right: 0; transform: translateY(-50%);
+  width: 10px; height: 10px;
+  background-color: var(--color-fontColor);
+  -webkit-mask: url('../img/main/icon-foot-arrow.svg') no-repeat center; mask: url('../img/main/icon-foot-arrow.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+footer .cont-box-item {
+  margin: 30px 20px 0;
+}
+footer .cont-box-item > p {
+  font-size: var(--font-size-14); font-weight: 400;
+  color: var(--color-fontGray);
+}
+
+/********************************************************************
+              Bottom menu style cee
+********************************************************************/
+.bottom-menu, .bottom-view {
+  position: fixed; bottom: 0; left: 0; z-index: 9;
+  width: 100%; height: 69px;
+  border-top: 1px solid var(--color-ligthGray);
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+}
+.bottom-menu > .inner {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+  margin: 0 5%; height: 69px;
+}
+.bottom-menu > .inner > a {
+  display: flex; align-items: center; justify-content: center;
+}
+.bottom-menu > .inner > a i {
+  content: "";
+  display: block;
+  width: 20px; height: 20px;
+  background-color: var(--color-fontColor);
+}
+
+/********************************************************************
+              Bottom view style cee
+********************************************************************/
+.bottom-view {
+  height: auto;
+}
+.bottom-view > .inner {
+  margin: 15px 5% 0;
+  width: 90%;
+}
+.bottom-view > .inner .qty-item {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+}
+.bottom-view > .inner .qty-item > strong {
+  display: block;
+  font-size: var(--font-size-26); font-weight: 600;
+}
+.bottom-view > .inner .qty-item > .input-number {
+  width: auto; height: 27px;
+}
+.bottom-view > .inner .qty-item > .input-number input {
+  box-sizing: border-box;
+}
+.bottom-view > .inner .qty-item > .input-number input.qty {
+  width: 60px;
+  height: 27px; line-height: 27px;
+  text-align: center;
+  font-size: var(--font-size-16); font-weight: 700;
+  padding: 0;
+}
+.bottom-view > .inner .qty-item > .input-number button {
+  position: relative;
+  background-color: transparent; border-radius: 100%; border: 1px solid var(--color-ligthGray);
+  align-items: center; justify-content: center;
+  width: 27px; height: 27px; margin: 0;
+  cursor: pointer;
+  outline:none;
+  /* -webkit-appearance: none; */
+}
+.bottom-view > .inner .button-second {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  margin: 20px 0;
+}
+.bottom-view > .inner .button-second > a {
+  display: flex; justify-content: center; align-items: center;
+  width: 48%; height: 62px;
+  margin-left: 4%;
+}
+.bottom-view > .inner .button-second > a:first-child {
+  margin-left: 0;
+}
+.number-input {
+  border: 2px solid #ddd;
+  display: inline-flex;
+}
+
+
+/********************************************************************
+              Search top common area
+********************************************************************/
+.search-wrap .inner {
+  width: 100%; max-width: 750px;
+  padding-top: 20px; margin: 0;
+}
+.search-wrap .inner > .search-item {
+  position: relative;
+  display: flex; flex-direction: row; align-items: center;
+  border: 1px solid var(--color-ligthGray);
+  width: calc(100% - 1px - 1px); height: 60px;
+}
+.search-wrap .inner > .search-item input {
+  width: 100%; height: 100%;
+  padding: 0; padding-left: 60px;
+  background-color: transparent;
+  font-size: var(--font-size-16); font-weight: 300;
+}
+.search-wrap .inner > .search-item > i {
+  position: absolute; top: 50%; left: 20px;
+  transform: translateY(-50%);
+  display: flex; justify-content: center; align-items: center;
+  width: 22px; height: 22px;
+  background-color: var(--color-fontColor);
+  font-size: 0;
+}
+.search-wrap .inner > .search-item .btnClear {
+  position: absolute; top: auto; right: 3%;
+  width: 28px; height: 28px;
+  background-color: var(--color-red);  
+  -webkit-mask: url('../img/common/icon-close.svg') no-repeat center; mask: url('../img/common/icon-close.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  border: none; outline: none;
+  cursor: pointer;
+}
+
+
+
+/********************************************************************
+              common icon style css
+********************************************************************/
+i.icon-search {
+  -webkit-mask: url('../img/common/icon-search.svg') no-repeat center;
+          mask: url('../img/common/icon-search.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-cart {
+  -webkit-mask: url('../img/common/icon-cart.svg') no-repeat center;
+          mask: url('../img/common/icon-cart.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-hoem {
+  -webkit-mask: url('../img/common/icon-hoem.svg') no-repeat center;
+          mask: url('../img/common/icon-hoem.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-allmenu {
+  -webkit-mask: url('../img/common/icon-allmenu.svg') no-repeat center;
+          mask: url('../img/common/icon-allmenu.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-mypage {
+  -webkit-mask: url('../img/common/icon-mypage.svg') no-repeat center;
+          mask: url('../img/common/icon-mypage.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.eyes-on {
+  -webkit-mask: url('../img/member/icon-eye-on.svg') no-repeat center;
+          mask: url('../img/member/icon-eye-on.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.eyes-off {
+  -webkit-mask: url('../img/member/icon-eye-off.svg') no-repeat center;
+          mask: url('../img/member/icon-eye-off.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-error {
+  -webkit-mask: url('../img/member/icon-error.svg') no-repeat center;
+          mask: url('../img/member/icon-error.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-check {
+  -webkit-mask: url('../img/member/icon-check.svg') no-repeat center;
+          mask: url('../img/member/icon-check.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-tag-close {
+  -webkit-mask: url('../img/service/icon-tag-close.svg') no-repeat center;
+          mask: url('../img/service/icon-tag-close.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+
+/********************************************************************
+              common style css
+********************************************************************/
+.radius-10 {
+  border-radius: 10px;
+}
+.radius-8 {
+  border-radius: 8px;
+}
+.btn-box-wrap {
+  margin-top: 30px;
+}
