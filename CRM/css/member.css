@@ -1,0 +1,60 @@
+
+/********************************************************************
+              Common style css
+********************************************************************/
+.memContents {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100%; height: 100vh;
+}
+
+
+/********************************************************************
+              login style css
+********************************************************************/
+.login-box {
+  display: flex; flex-direction: column; align-items: center;
+  width: 450px; height: 500px;
+  background-color: var(--color-white);
+}
+.login-box .logo {
+  margin-top: 50px;
+}
+.login-box .naming {
+  font-size: var(--font-22); font-weight: 400; color: #849ccb;
+  margin-top: 20px;
+}
+.login-box .naming > strong {
+  color: var(--color-point); font-weight: 700;
+}
+.login-box .input-box {
+  margin-top: 30px;
+}
+.login-box .input-box > .input-item {
+  position: relative;
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  width: 340px; height: 58px;
+  background-color: #E9ECF1;
+  margin-top: 10px;
+}
+.login-box .input-box > .input-item > strong {
+  padding-left: 15px;
+  font-size: var(--font-16); font-weight: 700;
+}
+.login-box .input-box > .input-item > input {
+  width: calc(100% - 60px); height: 100%;
+  font-size: var(--font-15); font-weight: 500; color: var(--color-fontColor);
+  background-color: transparent;
+}
+.login-box .input-box > .input-item > input::-webkit-input-placeholder {
+  color: #99ACC2;
+}
+.login-box .check-box.save {
+  margin-top: 10px;
+}
+.login-box .btn-box-conts > a {
+  width: 340px; height: 58px;
+  border-radius: 29px;
+  font-size: var(--font-16); font-weight: 600;
+}

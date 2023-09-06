@@ -1,0 +1,154 @@
+
+/********************************************************************
+              header area
+********************************************************************/
+header {
+  position: fixed; top: 0; left: 0; z-index: 1;
+  width: 100%; height: 68px; min-width: 1600px;
+  box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .15);
+  background-color: var(--color-white);
+}
+header .inner {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  padding: 0 30px; height: 100%;
+}
+header .inner .logo-box > a {
+  width: auto; height: 35px;
+}
+header .inner .mem-btn {
+  display: flex;
+  flex-direction: row; justify-content: flex-end; align-items: center;
+}
+header .inner .mem-btn > a {
+  display: flex; align-items: center;
+  height: 34px;
+  padding: 0 30px;
+  border: 1px solid var(--color-ligthGray);
+  font-family: var(--font-family-malgun);
+  font-size: var(--font-12); font-weight: bold;
+}
+header .inner .mem-btn > a:last-child {
+  border-left: 0px;
+}
+header .inner .mem-btn > a.logout {
+  color: var(--color-red);
+}
+header .inner .mem-btn > a.mypage {
+  color: var(--color-navyBlue);
+}
+header .inner .mem-btn > a.logout:hover {
+  border-left: 1px solid var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-red);
+  margin-left: -1px;
+}
+header .inner .mem-btn > a.mypage:hover {
+  border-color: var(--color-navyBlue);
+  color: var(--color-navyBlue);
+}
+header .inner .mem-btn > a.logout:active {
+  background-color: var(--color-red); border-color: var(--color-red);
+  color: var(--color-white);
+}
+header .inner .mem-btn > a.mypage:active {
+  background-color: var(--color-navyBlue); border-color: var(--color-navyBlue);
+  color: var(--color-white);
+}
+
+
+
+/********************************************************************
+              common icon style css
+********************************************************************/
+i.icon-addn {
+  -webkit-mask: url('../img/common/icon-addn.svg') no-repeat center;
+          mask: url('../img/common/icon-addn.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-search {
+  -webkit-mask: url('../img/service/icon-search.svg') no-repeat center;
+          mask: url('../img/service/icon-search.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-plus {
+  -webkit-mask: url('../img/service/icon-plus.svg') no-repeat center;
+          mask: url('../img/service/icon-plus.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+
+/********************************************************************
+              common style css
+********************************************************************/
+.btn-box-conts {
+  display: flex;
+  justify-content: center; align-items: center;
+  margin-top: 30px;
+}
+.btn-box-conts > a {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: auto; height: auto;
+  margin-left: 10px;
+}
+.btn-box-conts > a:first-child {
+  margin-left: 0px;
+}
+
+.radius-3 {
+  border-radius: 3px;
+}
+.radius-5 {
+  border-radius: 5px;
+}
+.radius-10 {
+  border-radius: 10px;
+}
+.zindex3 {
+  z-index: 3;
+}
+
+
+/********************************************************************
+              pagination style css
+********************************************************************/
+ .pagination-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	   -ms-flex-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+ } 
+.blind {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px; height: 1px; margin: -1px;
+  overflow: hidden;
+  font-size: 0;
+}
+.pagination-box .page-list {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;
+  padding: 0 10px;
+  white-space: nowrap;
+  font-size: 0;
+}
+.pagination-box .page-list .page-link  {
+  -webkit-box-sizing: border-box; box-sizing: border-box;
+  position: relative;
+  display: block;
+  min-width: 28px; height: 28px;
+  border: 1px solid transparent; border-radius: 3px;
+  padding: 0 7px; font-size: 14px; font-weight: normal;
+  line-height: 26px;
+  color: var(--color-fontColor);
+  text-align: center;
+}
+.pagination-box .page.selected .page-link {
+  border-color: var(--color-point);
+  color: var(--color-point); font-weight: bold;
+}

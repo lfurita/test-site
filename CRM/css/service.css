@@ -1,0 +1,499 @@
+
+/********************************************************************
+              Common area
+********************************************************************/
+.servContents {
+  width: 100%;
+  display: flex; flex-direction: row; flex-wrap: nowrap;
+}
+.conts-box {
+  width: calc(100% - 250px); height: calc(100vh - 68px);
+  margin: 68px 0px 0; padding: 30px 50px 0px;
+  overflow-y: auto;
+}
+.conts-box > h1 {
+  font-size: var(--font-32); font-weight: 700;
+  color: var(--color-navyBlue);
+}
+.conts-box > h2.subtitle {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  font-size: var(--font-25); font-weight: 700;
+  color: var(--color-navyBlue);
+  margin-top: 50px;
+}
+.conts-box > h2.subtitle a.new-regis {
+  position: relative;
+  display: flex; justify-content: center; align-items: center;
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+/* 스크롤바 설정*/
+.conts-box::-webkit-scrollbar,
+.write-table ul > li textarea::-webkit-scrollbar {
+  width: 10px;
+}
+/* 스크롤바 막대 설정*/
+.conts-box::-webkit-scrollbar-thumb,
+.write-table ul > li textarea::-webkit-scrollbar-thumb {
+    background: #0B5EFF; border: 1px solid #003E9B;
+    border-radius: 8px;
+}
+/* 스크롤바 뒷 배경 설정*/
+.conts-box::-webkit-scrollbar-track,
+.write-table ul > li textarea::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+
+/********************************************************************
+              Menu Accordion style css
+********************************************************************/
+.menu-box {
+  width: 250px; height: 100vh;
+  background-color: #456296;
+  padding-top: 68px;
+}
+
+ul.menu-cont-item {
+  list-style: none;
+  width: 100%;
+  clear: both;
+  display: table;
+}
+ul.menu-cont-item .list-item {
+  font-size: 14px;
+  border-bottom: 1px solid #324252;
+  position: relative;
+  width: 100%; height: 65px;
+  font-family: var(--font-family-noto);
+  font-size: var(--font-18); font-weight: 700; color: var(--color-white);
+  box-sizing: border-box;
+  vertical-align: sub;
+  background: #3e5165;
+  clear: both;
+}
+ul.menu-cont-item .list-item:after {
+  content: "";
+  position: absolute; top: 50%; right: 30px;
+  transform: translateY(-50%);
+  width: 15px; height: 15px;
+  background-color: var(--color-white);
+  -webkit-mask: url('../img/common/icon-addn.svg') no-repeat center;
+          mask: url('../img/common/icon-addn.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  transition: .35s;
+}
+ul.menu-cont-item .list-item > span {
+  text-decoration: none;
+  display: flex; align-items: center;
+  height: 100%; height: 100%;
+  padding-left: 30px;
+  color: var(--color-white);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+ul.menu-cont-item .list-item:hover {
+  transition: 300ms all;
+}
+ul.menu-cont-item .list-item:hover > span,
+ul.menu-cont-item .list-item.active > span {
+  color: var(--color-aqua);
+}
+ul.menu-cont-item .list-item:hover:after {
+  background-color: var(--color-aqua);
+}
+ul.menu-cont-item .list-item .items {
+  height: 0px;
+  overflow: hidden;
+}
+ul.menu-cont-item .list-item .items a:hover {
+  background-color: #0E192F;
+  color: var(--color-aqua);
+  transition: 300ms all;
+}
+ul.menu-cont-item .list-item.active:after {
+  transform: translateY(-50%) rotate(-180deg);
+  background-color: var(--color-aqua);
+  transition: .35s;
+}
+ul.menu-cont-item .active > .items {
+  display: block;
+  padding: 0px; height: auto;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms;
+  clear: both; float: left;
+  width: 100%;
+}
+ul.menu-cont-item .active > .items li {
+  padding: 0px;
+  margin-bottom: 1px;
+  list-style: none;
+  background-color: #1E3868;
+}
+ul.menu-cont-item .active > .items li > a {
+  display: block;
+  padding: 15px 0; padding-left: 30px;
+  font-size: var(--font-15); font-weight: 500;
+  color: #A6DAF8;
+}
+ul.menu-cont-item .active > a {
+  text-transform: uppercase;
+}
+ul.menu-cont-item .active > .items li.on {
+  background-color: #0E192F;
+}
+ul.menu-cont-item .active > .items li.on > a {
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+
+/********************************************************************
+              List page style css
+********************************************************************/
+.conts-box > .details-table {
+  margin-top: 15px;
+  border: 1px solid var(--color-ligthGray); border-bottom: 0px;
+  background-color: var(--color-white);
+}
+.details-table ul {
+  display: flex;
+  flex-direction: row; flex-wrap: wrap;
+}
+.details-table ul > li {
+  display: flex;
+  align-items: center; justify-content: flex-start;
+  height: 47px; width: 23.3%;
+  font-size: var(--font-12); font-weight: normal;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.details-table ul > li.title {
+  justify-content: center;
+  width: 10%;
+  font-size: var(--font-13); font-weight: bold;
+  background-color: var(--color-snow);
+}
+.details-table ul > li:nth-child(6n+6) {
+  width: 23.4%;
+}
+.details-table ul > li input {
+  width: 100%; height: 100%;
+  padding-left: 15px;
+}
+.details-table ul > li .select-box {
+  position: relative; z-index: 1;
+  width: 100%; height: 46px;
+}
+.details-table ul > li .select-box ul,
+.details-table ul > li .select-box ul li { 
+  width: 100%;
+  border-bottom: 0px;
+}
+.details-table ul > li.fees {
+  font-weight: bold;
+  text-align: right;
+}
+.details-table ul > li.fees input {
+  width: 42%;
+  padding-right: 10px; text-align: right;
+}
+.details-table ul > li.fees > span {
+  display: inline-block;
+  width: calc(16% - 12px - 12px);
+  font-weight: bold; text-align: center;
+}
+
+.conts-box > .btn-box-conts > a.search,
+.conts-box > .btn-box-conts > a.rgstr {
+  width: 128px; height: 45px;
+  border-radius: 5px;
+  font-size: var(--font-16); font-weight: 500;
+  color: var(--color-white);
+}
+.conts-box > .btn-box-conts > a.rgstr:hover {
+  background-color: var(--color-navyBlue);
+  color: var(--color-aqua);
+}
+.conts-box > .btn-box-conts > a.search {
+  background-color: #8f8f8f;
+}
+.conts-box > .btn-box-conts > a.search:hover {
+  background-color: #656565;
+  color: var(--color-aqua);
+}
+.conts-box > .btn-box-conts > a.search .icon-search {
+  width: 18px; height: 18px;
+  background-color: var(--color-white);
+  margin-right: 5px;
+}
+.conts-box > .btn-box-conts > a.search:hover .icon-search {
+  background-color: var(--color-aqua);
+}
+.conts-box > .table-box {
+  margin-top: 50px;
+}
+.conts-box > .table-box > table {
+  border: 1px solid var(--color-ligthGray);
+  background-color: var(--color-white);
+}
+.conts-box > .table-box > table tr th,
+.conts-box > .table-box > table tr td {
+  font-size: var(--font-12); font-weight: normal;
+  color: var(--color-fontColor); text-align: center;
+  padding: 12px 0;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.conts-box > .table-box > table thead th {
+  font-weight: bold; font-size: var(--font-13);
+  background-color: #E7E7E7;
+}
+.conts-box > .table-box > table tr:last-child td {
+  border-bottom: 0px;
+}
+.conts-box > .table-box > table tr:nth-child(2n+2) td {
+  background-color: var(--color-snow);
+}
+.conts-box > .table-box > .pagination-box {
+  margin-top: 30px; margin-bottom: 50px;
+}
+.conts-box > .table-box > table tr td.left {
+  text-align: left;
+}
+.conts-box > .table-box > table tr td a.down {
+  width: 80%;
+  margin: 0 auto; padding: 7px 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  color: var(--color-fontColor); font-weight: bold; font-size: var(--font-12);
+}
+.conts-box > .table-box > table tr td a:hover.down {
+  background-color: var(--color-point); border-color: var(--color-point);
+  color: var(--color-white);
+}
+.conts-box > .table-box > table tbody tr:hover,
+.conts-box > .table-box > table tbody tr:nth-child(2n+2):hover td {
+  background-color: #e4f4fb;
+}
+
+.conts-box > .table-box > table.table-link tbody tr:hover > th,
+.conts-box > .table-box > table.table-link tbody tr:hover > td {
+  color: var(--color-point);
+  cursor: pointer;
+}
+
+
+
+/********************************************************************
+              write page style css
+********************************************************************/
+.conts-box > .write-table {
+  margin-top: 15px;
+  border: 1px solid var(--color-ligthGray); border-bottom: 0px;
+  background-color: var(--color-white);
+}
+.write-table ul {
+  display: flex;
+  flex-direction: row; flex-wrap: wrap;
+}
+.write-table ul > li {
+  display: flex;
+  align-items: center; justify-content: flex-start;
+  height: 47px; width: 40%;
+  font-size: var(--font-12); font-weight: normal;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.write-table ul > li.title {
+  justify-content: center;
+  width: 10%;
+  font-size: var(--font-13); font-weight: bold;
+  background-color: var(--color-snow);
+}
+.write-table ul > li.first {
+  width: 90%;
+}
+.write-table ul > li .select-box {
+  width: 35%; height: 46px;
+}
+.write-table ul > li .select-box ul,
+.write-table ul > li .select-box ul li { 
+  width: 100%;
+  border-bottom: 0px;
+}
+.write-table ul > li input {
+  width: 100%; height: 100%;
+  padding-left: 15px;
+}
+.write-table ul > li.title2 {
+  justify-content: center;
+  width: 10%; height: 150px;
+  font-size: var(--font-13); font-weight: bold;
+  background-color: var(--color-snow);
+}
+.write-table ul > li.tarea {
+  height: 150px;
+}
+.write-table ul > li textarea {
+  resize: none;
+  width: 100%; height: 149px;
+  border: 0px; padding: 20px;
+}
+.write-table ul > li .radiobox {
+  margin-left: 15px;
+}
+.write-table ul > li.fees {
+  font-weight: bold;
+}
+.write-table ul > li.fees input {
+  width: 20%;
+  text-align: right; padding-right: 10px;
+}
+.write-table ul > li.fees .radiobox input {
+  width: 100%;  
+}
+.write-table ul > li span.url {
+  padding-left: 15px;
+}
+.write-table ul > li span.url + input {
+  padding-left: 7px;
+}
+.write-table ul > li.address input {
+  width: 44.5%;
+}
+.write-table ul > li.address input:last-child {
+  width: 30%;
+}
+.write-table ul > li.address button {
+  width: 120px; height: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.conts-box > .indvd-bsns {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap;
+  justify-content: flex-start; align-items: center;
+  margin-top: 15px; margin-bottom: 5px;
+}
+.conts-box > .indvd-bsns > .selector {
+  position: relative;
+  width: auto; height: 48px; 
+  margin-left: 5px;
+}
+.conts-box > .indvd-bsns > .selector:first-child {
+  margin-left: 0;
+}
+.conts-box > .indvd-bsns > .selector input {
+  position: absolute; top: 5px; left: 5px; z-index: 1;
+  opacity: 0;
+}
+.conts-box > .indvd-bsns > .selector label {
+  position: relative; z-index: 1;
+  display: flex;
+  justify-content: center; align-items: center;
+  height: 100%; padding: 0 25px;
+  font-family: var(--font-family-noto); color: var(--color-point);
+  font-size: var(--font-14); font-weight: 600;
+  border: 1px solid var(--color-point); border-radius: 5px;
+  background-color: var(--color-white); box-shadow: 0 2px 2px 0 rgba(7,27,66, .15);
+  cursor: pointer;
+}
+.conts-box > .indvd-bsns > .selector input:checked+label {
+  background-color: var(--color-point);
+  color: var(--color-white);
+}
+/******************************************* 고객 정보 관리 */
+.conts-box > .indvd-bsns > .selector.disabled label {
+  border-color: #c5c5c5; color: var(--color-fontSilver);
+  cursor: default;
+}
+.conts-box > .indvd-bsns > .selector.disabled input {
+  display: none;
+}
+.conts-box > .history-box {
+  margin-top: 10px; margin-bottom: 30px;
+}
+.conts-box > .history-box > ul {
+  display: flex; flex-direction: row; flex-wrap: wrap;
+  border: 1px solid var(--color-ligthGray); border-bottom: 0;
+  background-color: var(--color-white);
+}
+.conts-box > .history-box > ul li {
+  font-size: var(--font-13); font-weight: bold;
+}
+.conts-box > .history-box > ul li:nth-child(2n+1) {
+  width: 25%;
+  background-color: var(--color-snow);
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.conts-box > .history-box > ul li:nth-child(2n+2) {
+  width: 75%;
+  border-left: 1px solid var(--color-ligthGray); border-bottom: 1px solid var(--color-ligthGray);
+}
+.conts-box > .history-box > ul li .title,
+.conts-box > .history-box > ul li .cont-box-item {
+  margin: 20px;
+}
+.conts-box > .history-box > ul li .title {
+  display: flex;
+}
+.conts-box > .history-box > ul li .title > .icon-box-item {
+  display: flex; justify-content: center; align-items: center;
+}
+.conts-box > .history-box > ul li .title > .icon-box-item > i {
+  display: block;
+}
+.conts-box > .history-box > ul li .title > .text-box-item > strong {
+  font-size: var(--font-16); font-weight: 600;
+}
+.conts-box > .history-box > ul li .title > .text-box-item > p {
+  font-size: var(--font-14); font-weight: 500;
+}
+.conts-box > .history-box > ul li .cont-box-item > strong {
+  font-size: var(--font-18); font-weight: 600;
+}
+.conts-box > .history-box > ul li .cont-box-item > p {
+  font-size: var(--font-14); font-weight: 400; color: var(--color-fontGray);
+  padding-top: 5px;
+}
+
+
+
+/********************************************************************
+              File add style css
+********************************************************************/
+.file-add {
+  display:flex; flex-wrap:wrap; 
+  position:relative;
+  width: 100%; height: 100%;
+}
+.file-add input[type="file"] {
+  position:absolute; top:0; left:0; opacity:0; 
+  width:100%; height:100%; 
+  cursor:pointer;
+}
+.file-add .add-file-txt {
+  display: flex;
+  justify-content: flex-start; align-items: center;
+  width: 42%; height: 100%; 
+  box-sizing:border-box;
+  border: 0px; padding:0 15px;
+  font-size: var(--font-13); font-weight:bold;
+}
+.file-add .add-file-btn {
+  display: flex; justify-content: center; align-items: center;
+  height:100%; width: auto;
+  background: var(--color-black);
+  box-sizing: border-box; 
+  font-size: var(--font-13); color:var(--color-white);
+  margin-left:10px; padding: 0 35px;
+  cursor:pointer;
+}
+.file-add:hover .add-file-btn {
+  background-color: var(--color-point);
+}
