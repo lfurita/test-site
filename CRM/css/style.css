@@ -4,7 +4,7 @@
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0; padding: 0; border: 0;
-	font-size: 100%; font: inherit; font-family: 'Roboto', "Noto Sans KR", "Pretendard", 'Malgun Gothic', "맑은고딕", Dotum, sans-serif; line-height: 1.2;
+	font-size: 100%; font: inherit; font-family: 'Malgun Gothic', "맑은고딕", 'Roboto', "Noto Sans KR", "Pretendard",  Dotum, sans-serif; line-height: 1.2;
   letter-spacing: -.0344rem; color: var(--color-fontColor);
 	vertical-align: baseline;
 }
@@ -135,17 +135,21 @@ i {
 }
 
 
+h1, h2, h3, h4 {
+  font-family: var(--font-family-noto);
+}
 h2 {
-  font-size: var(--font-size-48); font-weight: 700;
+  font-family: var(--font-family-noto);
+  font-size: var(--font-32); font-weight: 700;
 }
 h3 {
-  font-size: var(--font-size-32); font-weight: 700;
+  font-size: var(--font-25); font-weight: 700;
 }
 h4 {
-  font-size: var(--font-size-24); font-weight: 700;
+  font-size: var(--font-22); font-weight: 700;
 }
 strong {
-  font-size: var(--font-size-24); font-weight: 700;
+  font-size: var(--font-13); font-weight: 700;
 }
 b {
   display: block;
@@ -156,24 +160,25 @@ p {
   word-break: keep-all;
 }
 
-.mgT0 { margin-top: 0px !important; }
+.mgT0  { margin-top: 0px !important; }
 .mgT10 { margin-top: 10px !important; }
 .mgT30 { margin-top: 30px !important; }
+.mgB30 { margin-bottom: 30px !important; }
 
-.pdT5 { padding-top: 5px !important; }
+.pdT5  { padding-top: 5px !important; }
 .pdT10 { padding-top: 10px !important; }
 
 .fc-point { color: var(--color-point); }
-.fc-red { color: var(--color-red); }
-.fc-blue { color: var(--color-blue); }
-.fc-sky { color: var(--color-sky); }
+.fc-red   { color: var(--color-red); }
+.fc-blue  { color: var(--color-blue); }
+.fc-sky   { color: var(--color-sky); }
 .radius-5 { border-radius: 5px; }
 
 
 
 /******************************************************************
            input & textarea Style Css 
-***********************/
+********************************************************************/
 input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
 textarea {
   -webkit-box-sizing: border-box;
@@ -235,7 +240,7 @@ input:focus {
 
 /******************************************************************
            checkbox Style Css 
-***********************/
+********************************************************************/
 .check-box {
   display: flex;
   flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: flex-start;
@@ -298,84 +303,95 @@ input:focus {
 
 /******************************************************************
            radioBox Style Css 
-***********************/
-.radiobox {
-  display: flex; align-items: center;
-  position: relative; z-index: 1;
-  width: auto; height: auto;
+********************************************************************/
+
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;   
 }
-.radiobox input[type=radio] {
-  position: absolute;
-  visibility: hidden;
-}
-.radiobox label {
-  position: relative; z-index: 1;
-  display: block;
-  font-weight: bold; font-size: var(--font-12);
-  margin-left: 20px;
-  -webkit-transition: all 0.25s linear;
-          transition: all 0.25s linear;
+.checkbox-custom, .checkbox-custom-label,
+.radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
   cursor: pointer;
 }
-.radiobox:hover label {
-  color: #33BBC3;
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+  display: flex; align-items: center;
 }
-.radiobox .check {
-  display: block;
-  position: absolute; top: 50%; left: 0px; z-index: 1;
-  transform: translateY(-50%);
-  border: 2px solid var(--color-ligthGray); border-radius: 100%;
-  height: 15px; width: 15px;
-	-webkit-transition: border .25s linear;
-	        transition: border .25s linear;
+.radio-custom + .radio-custom-label:before {
+  content: '';
+  display: flex; align-items: center;
+  background: var(--color-fontGray);
+  border: 2px solid var(--color-fontGray);
+  width: 16px; height: 16px;
+  padding: 2px; margin-right: 5px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 3px #fff;
 }
-.radiobox:hover .check {
-  border-color: #33BBC3;
+.radio-custom + .radio-custom-label:before {
+ border-radius: 50%;
+ border-color: var(--color-fontSilver);
 }
-.radiobox .check::before {
-	content: '';
-  position: absolute; top: 2px; left: 2px;
-  border-radius: 100%;
-  height: 7px; width: 7px;
-  margin: auto;
-	-webkit-transition: background 0.25s linear;
-	        transition: background 0.25s linear;
-}
-.radiobox input[type=radio]:checked ~ .check {
-  border-color: var(--color-point);
-}
-.radiobox input[type=radio]:checked ~ .check::before {
+.radio-custom:checked + :before {
   background: var(--color-point);
+  border-color: var(--color-point);
+  box-shadow: inset 0px 0px 0px 3px #fff;
 }
-.radiobox input[type=radio]:checked ~ label{
+.radio-custom:focus + .radio-custom-label:before {
+ border: 2px solid var(--color-point);
+}
+.radio-custom:checked + label {
   color: var(--color-point);
 }
-/****** 비활성용 */
+
+/************************ checkbox style css */
+.checkbox-custom + .checkbox-custom-label:before {
+  content: '';
+  display: flex; align-items: center;
+  border: 2px solid var(--color-fontGray);
+  width: 16px; height: 16px;
+  padding: 2px; margin-right: 5px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  box-shadow: inset 0px 0px 0px 3px #fff;
+  border: 2px solid var(--color-point);
+}
+.checkbox-custom:focus + .checkbox-custom-label:before{
+  border: 1px solid var(--color-point);
+  outline: 1px solid var(--color-point);
+}
+
+/************************ 비활성용 */
 .radiobox.disabled,
 .radiobox.disabled label {
   cursor: default;
 }
-.radiobox.disabled .check {
-  border-color: var(--color-fontSilver);
+.radiobox.disabled .radio-custom + .radio-custom-label:before {
+  background: var(--color-ligthGray);
+  border: 2px solid var(--color-ligthGray);
 }
-.radiobox.disabled label {
+.radiobox.disabled .radio-custom + .radio-custom-label:before {
+ border-radius: 50%;
+ border-color: var(--color-ligthGray);
+}
+.radiobox.disabled .radio-custom + label {
   color: var(--color-fontSilver);
 }
-.radiobox.disabled input[type=radio]:checked ~ .check {
-  color: var(--color-fontSilver);
+.write-table ul > li.check-box > .checkbox label:after {
+  top: 9px;
+  left: 3px;
 }
-.radiobox.disabled input[type=radio]:checked ~ .check::before {
-  display: none;
-}
-.radiobox.disabled input[type=radio]:checked ~ label {
-  color: var(--color-fontSilver);
-}
+
 
 
 
 /******************************************************************
            selectBox Style Css 
-***********************/
+********************************************************************/
 select { 
   border-radius:0;          /* 아이폰 사파리 보더 없애기 */
   /* 네이티브 외형 감추기 */ 
@@ -393,7 +409,7 @@ select {
   -webkit-appearance: none; /* 스핀 버튼 제거 */
           appearance: none;
   border-radius: 0; /* border-radius 제거 */
-  border: none; /* select 요소의 테두리 제거 */
+  border: none;     /* select 요소의 테두리 제거 */
   width: 100%;
   padding: 0; padding-left: 1.25rem;
   font-size: var(--font-size-12); font-weight: 500; line-height: 48px;
@@ -428,6 +444,51 @@ select:focus, select:active {
 .select-box:hover:after {
   background: var(--color-point);
 }
+/*the container must be positioned relative:*/
+.select-custom {
+  position: relative;
+  width: 100%; height: 46px;
+  background-color: var(--color-white);
+  cursor: pointer;
+  border-radius: 0;
+}
+.select-custom:hover {
+  color: var(--color-point);
+}
+/*style the arrow inside the select element:*/
+.select-custom:after {
+  content: "";
+  position: absolute; top: 0; right: 1rem; bottom: 0;
+  width: 15px; height: 15px;
+  background: var(--color-black);
+  -webkit-mask: url('../img/service/icon-select.svg') no-repeat center;
+          mask: url('../img/service/icon-select.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  margin: auto;
+  pointer-events: none;
+}
+.select-custom select > option {
+  display: block;
+  font-size: var(--font-13); font-weight: 500;
+}
+.select-custom.disabled,
+.select-custom.disabled select {
+  cursor: default;
+}
+.select-custom.disabled,
+.select-custom.disabled select {
+  color: var(--color-fontSilver);
+}
+.select-custom.disabled:after {
+  background: var(--color-fontSilver);
+}
+.select-custom.disabled select > option {
+  display: none;
+}
+
+
+/* 
+2023 09 13일에 변경함 select option 에서 value 값이 필요함
 .select-box ul { 
   position: absolute;
   list-style: none;
@@ -460,19 +521,20 @@ select:focus, select:active {
 .select-box ul li.init {
   cursor: pointer;
   padding-left: 15px;
-  font-weight: bold; color: var(--color-navyBlue);
+  font-weight: bold; 
+  color: var(--color-fontColor);
   box-shadow: 0 0 0px 0 rgba(0, 0, 0, .0);
 }
 .select-box ul li:focus {
   color: var(--color-fontColor);
-}
+} */
 
 
 
 
 /******************************************************************
-           root Style Css 
-***********************/
+           root Style Css
+********************************************************************/
 :root {
   /* font color style */
   --color-fontColor:  #1e1e1e;
@@ -522,10 +584,10 @@ select:focus, select:active {
 }
 
 
-/*********************************************************************************************
+/******************************************************************
               1600px Style css
                         *** 500미만 style ***
-*****************************/
+********************************************************************/
 
 @media screen and (max-width: 1599px){
   body { 

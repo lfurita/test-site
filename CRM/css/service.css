@@ -13,7 +13,7 @@
 }
 .conts-box > h1 {
   font-size: var(--font-32); font-weight: 700;
-  color: var(--color-navyBlue);
+  color: var(--color-fontColor);
 }
 .conts-box > h2.subtitle {
   display: flex;
@@ -207,15 +207,31 @@ ul.menu-cont-item .active > .items li.on > a {
   width: calc(16% - 12px - 12px);
   font-weight: bold; text-align: center;
 }
-
+.details-table ul > li > .date_picker {
+  display: flex; justify-content: center; align-items: center;
+  width: 100%; height: 100%;
+}
+.details-table ul > li .date_picker > input {
+  width: calc(100% - 50px); height: 100%;
+  padding-left: 0;
+}
+.details-table ul > li > .picker-interval {
+  display: flex; justify-content: center; align-items: center;
+  font-size: var(--font-12); font-weight: bold;
+  padding: 0 15px;
+  height: 100%;
+}
+.conts-box > .memb-table .btn-pot-right > a.rgstr,
 .conts-box > .btn-box-conts > a.search,
-.conts-box > .btn-box-conts > a.rgstr {
+.conts-box > .btn-box-conts > a.rgstr,
+.conts-box > .btn-box-conts > a.btn-modal {
   width: 128px; height: 45px;
   border-radius: 5px;
   font-size: var(--font-16); font-weight: 500;
   color: var(--color-white);
 }
-.conts-box > .btn-box-conts > a.rgstr:hover {
+.conts-box > .btn-box-conts > a.rgstr:hover,
+.conts-box > .btn-box-conts > a.btn-modal:hover {
   background-color: var(--color-navyBlue);
   color: var(--color-aqua);
 }
@@ -280,12 +296,34 @@ ul.menu-cont-item .active > .items li.on > a {
 .conts-box > .table-box > table tbody tr:nth-child(2n+2):hover td {
   background-color: #e4f4fb;
 }
-
 .conts-box > .table-box > table.table-link tbody tr:hover > th,
 .conts-box > .table-box > table.table-link tbody tr:hover > td {
   color: var(--color-point);
   cursor: pointer;
 }
+.conts-box > .table-box > table.table-link tr td.p0 {
+  padding: 0;
+}
+.conts-box > .table-box > table.table-link tr td .day-item {
+  display: flex;
+  align-items: center; justify-content: center;
+}
+.day-item > span {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 24px; height: 22px;
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  background-color: var(--color-white);
+  margin-left: 5px;
+}
+.day-item > span:first-child {
+  margin-left: 0;
+}
+.day-item > span.active {
+  border-color: var(--color-point); background-color: var(--color-point);
+  color: var(--color-white);
+}
+
 
 
 
@@ -305,6 +343,7 @@ ul.menu-cont-item .active > .items li.on > a {
   display: flex;
   align-items: center; justify-content: flex-start;
   height: 47px; width: 40%;
+  font-family: var(--font-family-malgun);
   font-size: var(--font-12); font-weight: normal;
   border-bottom: 1px solid var(--color-ligthGray);
 }
@@ -317,14 +356,20 @@ ul.menu-cont-item .active > .items li.on > a {
 .write-table ul > li.first {
   width: 90%;
 }
+.write-table ul > li .select-custom,
 .write-table ul > li .select-box {
   width: 35%; height: 46px;
+}
+.write-table ul > li .select-custom.bord-left,
+.write-table ul > li .select-box.bord-left {
+  border-left: 1px solid var(--color-ligthGray);
+  margin-left: 50px;
 }
 .write-table ul > li .select-box ul,
 .write-table ul > li .select-box ul li { 
   width: 100%;
   border-bottom: 0px;
-}
+} 
 .write-table ul > li input {
   width: 100%; height: 100%;
   padding-left: 15px;
@@ -335,6 +380,41 @@ ul.menu-cont-item .active > .items li.on > a {
   font-size: var(--font-13); font-weight: bold;
   background-color: var(--color-snow);
 }
+.write-table ul > li.title3 {
+  display: flex;
+  flex-direction: column; align-items: center; justify-content: center;
+  width: 10%; height: 200px;
+  font-size: var(--font-13); font-weight: bold;
+  background-color: var(--color-snow);
+}
+.write-table ul > li.title3 a.file-btn {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  width: 60%;
+  margin: 10px 15px 0; padding: 8px 0;
+  background-color: var(--color-white);
+}
+.write-table ul > li.title3 a > i {
+  display: block;
+  width: 22px; height: 22px;
+  background-color: var(--color-fontColor);
+  margin-right: 7px;
+}
+.write-table ul > li.title3 a.file-btn:hover {
+  border-color: var(--color-point);
+  color: var(--color-point);
+}
+.write-table ul > li.title3 a.file-btn:hover > i {
+  background-color: var(--color-point);
+}
+.write-table ul > li.title3 a.file-btn:active {
+  border-color: var(--color-point);
+  background-color: var(--color-point);
+  color: var(--color-white);
+}
+.write-table ul > li.title3 a.file-btn:active > i {
+  background-color: var(--color-white);
+}
 .write-table ul > li.tarea {
   height: 150px;
 }
@@ -343,8 +423,31 @@ ul.menu-cont-item .active > .items li.on > a {
   width: 100%; height: 149px;
   border: 0px; padding: 20px;
 }
+.write-table ul > li.task-wrap {
+  display: flex;
+  flex-direction: column; align-items: flex-start;
+  height: 200px;
+}
+.write-table ul > li.task-wrap > .task-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center;
+  padding-top: 15px;
+}
+.write-table ul > li.task-wrap > .textarea1 {
+  width: calc(100% - 15px - 15px); height: calc(120px - 10px - 10px);
+  border: 1px solid var(--color-ligthGray); padding: 15px;
+  margin: 10px 15px 0;
+}
+.write-table ul > li.task-wrap > .file-add {
+  height: 48px;
+}
+
 .write-table ul > li .radiobox {
+  position: relative;
   margin-left: 15px;
+}
+.write-table ul > li .radiobox input {
+  height: 20px;
 }
 .write-table ul > li.fees {
   font-weight: bold;
@@ -372,6 +475,102 @@ ul.menu-cont-item .active > .items li.on > a {
   width: 120px; height: 100%;
   background-color: var(--color-black);
   color: var(--color-white);
+}
+.write-table ul > li > .date_picker {
+  display: flex; justify-content: center; align-items: center;
+  width: 45%; height: 100%;
+  z-index: 3;
+}
+.write-table ul > li > .date_picker > img {
+  cursor: pointer;
+}
+.write-tableul > li .date_picker > input {
+  width: calc(100% - 50px); height: 100%;
+  padding-left: 0;
+}
+.write-table ul > li > .picker-interval {
+  display: flex; justify-content: center; align-items: center;
+  font-size: var(--font-12); font-weight: bold;
+  padding: 0 15px;
+  height: 100%;
+}
+.write-table ul > li input.widht-200 {
+  text-align: right;
+  margin-right: 10px;
+}
+.write-table ul > li.second,
+.write-table ul > li.third {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+}
+.write-table ul > li.second .second-wrap {
+  display: flex; justify-content: flex-start; align-items: center;
+  width: 50%;
+  padding-left: 15px;
+}
+.write-table ul > li.second .second-wrap > strong {
+  font-weight: bold;
+}
+.write-table ul > li.second .second-wrap .select-box {
+  width: calc(100% - 20px);
+}
+.write-table ul > li.second .second-wrap .select-box.width-50p {
+  width: calc(50% - 20px);
+}
+.write-table ul > li.second .second-wrap .select-box.width-35p {
+  width: calc(35% - 20px);
+}
+.write-table ul > li.second .second-wrap .select-box.disabled {
+  background-color: var(--color-snow);
+  margin: 0 10px;
+  cursor: default;
+}
+.select-box.disabled ul li.init {
+  color: var(--color-fontGray);
+  display: flex;
+}
+.select-box.disabled ul li {
+  cursor: default;
+}
+.select-box.disabled:after {
+  background-color: var(--color-fontGray);
+}
+.write-table ul > li.third {
+  justify-content: flex-start;
+}
+.write-table ul > li.third .third-wrap {
+  display: flex; justify-content: flex-start; align-items: center;
+  width: 30%;
+  padding-left: 15px;
+}
+.write-table ul > li.third .third-wrap input {
+  width: calc(100% - 25px - 15px);
+}
+.write-table ul > li.third .third-wrap input[type=number] {
+  text-align: right;
+  padding-right: 15px;
+}
+.write-table ul > li.third > span {
+  margin-left: 10px;
+}
+.write-table ul > li .advert-cost {
+  display: flex;
+  align-items: center; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;
+  height: 100%;
+}
+.write-table ul > li .advert-cost > strong {
+  padding-left: 15px;
+}
+.write-table ul > li .advert-cost input {
+  width: 100px; height: 100%;
+}
+.write-table ul > li .advert-cost input:nth-child(2) {
+  width: 420px; height: 100%;
+  border-right: 1px solid var(--color-ligthGray);
+}
+.write-table ul > li .advert-cost input[type=number] {
+  text-align: right;
+  padding-right: 15px;
 }
 
 .conts-box > .indvd-bsns {
@@ -424,35 +623,49 @@ ul.menu-cont-item .active > .items li.on > a {
   background-color: var(--color-white);
 }
 .conts-box > .history-box > ul li {
+  display: table-cell;
   font-size: var(--font-13); font-weight: bold;
 }
 .conts-box > .history-box > ul li:nth-child(2n+1) {
-  width: 25%;
+  width: 20%;
   background-color: var(--color-snow);
   border-bottom: 1px solid var(--color-ligthGray);
 }
 .conts-box > .history-box > ul li:nth-child(2n+2) {
-  width: 75%;
+  width: 80%;
   border-left: 1px solid var(--color-ligthGray); border-bottom: 1px solid var(--color-ligthGray);
 }
 .conts-box > .history-box > ul li .title,
 .conts-box > .history-box > ul li .cont-box-item {
-  margin: 20px;
+  margin: 30px;
 }
 .conts-box > .history-box > ul li .title {
   display: flex;
+  align-items: center;
+  margin-left: 50px;
 }
 .conts-box > .history-box > ul li .title > .icon-box-item {
   display: flex; justify-content: center; align-items: center;
+  width: 62px; height: 62px;
 }
 .conts-box > .history-box > ul li .title > .icon-box-item > i {
   display: block;
+  width: 52px; height: 52px;
+  background-color: var(--color-fontColor);
+}
+.conts-box > .history-box > ul li .title > .text-box-item {
+  margin-left: 20px;
 }
 .conts-box > .history-box > ul li .title > .text-box-item > strong {
   font-size: var(--font-16); font-weight: 600;
 }
 .conts-box > .history-box > ul li .title > .text-box-item > p {
   font-size: var(--font-14); font-weight: 500;
+}
+.conts-box > .history-box > ul li .cont-box-item {
+  display: flex;
+  align-items: flex-start; flex-direction: column; justify-content: center;
+  margin-left: 50px;
 }
 .conts-box > .history-box > ul li .cont-box-item > strong {
   font-size: var(--font-18); font-weight: 600;
@@ -461,6 +674,32 @@ ul.menu-cont-item .active > .items li.on > a {
   font-size: var(--font-14); font-weight: 400; color: var(--color-fontGray);
   padding-top: 5px;
 }
+
+
+
+/********************************************************************
+              회원관리 style css
+********************************************************************/
+
+.write-table ul > li.check-box {
+  display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center;
+  padding-left: 15px;
+}
+.write-table ul > li.check-box > .checkbox {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: flex-start;
+  width: auto;
+	margin-right: 15px;
+	font-family: var(--font-family-malgun);
+	font-size: var(--font-12); font-weight: bold;
+  border: 0px;
+  cursor: pointer;
+}
+.write-table ul > li.check-box > .checkbox label {
+  display: flex; flex-direction: row; flex-wrap: nowrap;
+  width: auto;
+}
+
 
 
 
@@ -496,4 +735,67 @@ ul.menu-cont-item .active > .items li.on > a {
 }
 .file-add:hover .add-file-btn {
   background-color: var(--color-point);
+}
+
+
+/********************************************************************
+              Search top common style css
+********************************************************************/
+.search-item {
+  position: relative;
+  display: flex; flex-direction: row; align-items: center;
+  width: calc(100% - 1px - 1px); height: 100%;
+}
+.search-item input {
+  width: 100%; height: 100%;
+  padding: 0; padding-left: 60px;
+  background-color: transparent;
+  font-size: var(--font-size-12); font-weight: 300;
+}
+.search-item > i {
+  position: absolute; top: 50%; right: 15px;
+  transform: translateY(-50%);
+  display: flex; justify-content: center; align-items: center;
+  width: 22px; height: 22px;
+  background-color: var(--color-fontColor);
+  font-size: 0;
+}
+.search-item .btnClear {
+  position: absolute; top: auto; right: 50px;
+  width: 28px; height: 28px;
+  background-color: var(--color-red);  
+  -webkit-mask: url('../img/service/icon-close.svg') no-repeat center; mask: url('../img/service/icon-close.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  border: none; outline: none;
+  cursor: pointer;
+}
+
+
+/********************************************************************
+              common style css
+********************************************************************/
+.widht-180 {
+  width: 180px !important;
+}
+.widht-200 {
+  width: 200px !important;
+}
+.width-50p {
+  width: 50% !important;
+}
+.width-35p {
+  width: 35% !important;;
+}
+.width-50 {
+  width: 50px !important;;
+}
+.zindex3 {
+  z-index: 3;
+}
+.zindex4 {
+  z-index: 4;
+}
+
+#ui-datepicker-div {
+  z-index: 3;
 }

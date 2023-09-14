@@ -8,15 +8,15 @@
         </li>
         <li class="list-item <?=($menuNo[0]==3)?"active":""?>"><span>보험 계약 관리</span>
             <ul class="items">
-                <li class="<?=($menuNo[0]==3 && $menuNo[1]==1)?"on":""?>"><a href="/CRM/service/">전체 리스트</a></li>
-                <li class="<?=($menuNo[0]==3 && $menuNo[1]==2)?"on":""?>"><a href="/CRM/service/">계약 등록</a></li>
-                <li class="<?=($menuNo[0]==3 && $menuNo[1]==3)?"on":""?>"><a href="/CRM/service/">거래처 관리</a></li>
+                <li class="<?=($menuNo[0]==3 && $menuNo[1]==1)?"on":""?>"><a href="/CRM/service/mkCnt-list.php">전체 리스트</a></li>
+                <li class="<?=($menuNo[0]==3 && $menuNo[1]==2)?"on":""?>"><a href="/CRM/service/mkCnt-register.php">계약 등록</a></li>
             </ul>
         </li>
         <li class="list-item <?=($menuNo[0]==4)?"active":""?>"><span>기초 정보</span>
             <ul class="items">
                 <li class="<?=($menuNo[0]==4 && $menuNo[1]==1)?"on":""?>"><a href="/CRM/service/insur-list.php">보험사 관리</a></li>
                 <li class="<?=($menuNo[0]==4 && $menuNo[1]==2)?"on":""?>"><a href="/CRM/service/inprd-list.php">보험상품 관리</a></li>
+                <li class="<?=($menuNo[0]==4 && $menuNo[1]==3)?"on":""?>"><a href="/CRM/service/mmbr-list.php">회원 관리</a></li>
             </ul>
         </li>
     </ul>

@@ -76,6 +76,21 @@ i.icon-plus {
           mask: url('../img/service/icon-plus.svg') no-repeat center;
   -webkit-mask-size: cover; mask-size: cover;
 }
+i.icon-email {
+  -webkit-mask: url('../img/service/icon-email.svg') no-repeat center;
+          mask: url('../img/service/icon-email.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-tel {
+  -webkit-mask: url('../img/service/icon-tel.svg') no-repeat center;
+          mask: url('../img/service/icon-tel.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-file {
+  -webkit-mask: url('../img/service/icon-file.svg') no-repeat center;
+          mask: url('../img/service/icon-file.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
 
 
 /********************************************************************
@@ -86,6 +101,7 @@ i.icon-plus {
   justify-content: center; align-items: center;
   margin-top: 30px;
 }
+.btn-pot-right > a,
 .btn-box-conts > a {
   display: flex;
   justify-content: center; align-items: center;
@@ -94,6 +110,13 @@ i.icon-plus {
 }
 .btn-box-conts > a:first-child {
   margin-left: 0px;
+}
+.btn-pot-right {
+  position: relative;
+  margin-top: 30px;
+}
+.btn-pot-right > a {
+  position: absolute; top: 0; right: 0;
 }
 
 .radius-3 {
@@ -104,9 +127,6 @@ i.icon-plus {
 }
 .radius-10 {
   border-radius: 10px;
-}
-.zindex3 {
-  z-index: 3;
 }
 
 
@@ -151,4 +171,93 @@ i.icon-plus {
 .pagination-box .page.selected .page-link {
   border-color: var(--color-point);
   color: var(--color-point); font-weight: bold;
+}
+
+
+
+/*********************************************************************************************
+						  UI Datepicker Style css
+*****************************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: solid rgba(255, 255, 255, .55)!important;
+  border-width: 1px 0 0 1px!important;
+}
+.ui-datepicker td {
+  border: 1px solid #CCC !important;
+  padding: 0 !important
+}
+.ui-datepicker-calendar thead tr th span {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+}
+.ui-widget-header {
+  background: #2d2d2d !important;
+  border: 0 !important
+}
+.ui-datepicker .ui-datepicker-title select {
+  background: #2d2d2d !important;
+  color: var(--color-white) !important;
+  font-size: 15px !important;
+}
+.ui-widget-header .ui-icon {
+  background-image: none !important;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin-top: 4px !important;
+}
+#ui-datepicker-div {
+  padding: 0;
+  width: 275px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  background: linear-gradient(20deg, #e2e2e2, #eeeeee) !important;
+}
+.ui-state-default {
+  font-size: var(--font-size-12);
+  font-weight: bold !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 33% !important;
+  padding-left: 22px !important;
+}
+.ui-datepicker th {
+  padding: 0em .3em 0.2em !important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+.ui-button:hover, .ui-button:focus {
+  background: #1EB7AD !important;
+  box-shadow: inset 0px 0px 10px #32DACF, inset 0px 0px 20px #35e5f5 !important;
+  color: var(--color-white) !important;
+}
+.ui-datepicker table {
+  margin: 0 !important;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+  border: 0 !important;
+}
+
+/*Right Arrow*/
+.ui-datepicker .ui-datepicker-next span {
+  width: 0!important;
+  height: 0!important;
+  border-left: 10px solid white!important;
+  border-right: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+
+/*Left Arrow*/
+.ui-datepicker .ui-datepicker-prev span {
+  width: 0!important;height: 0!important;
+  border-right: 10px solid white!important;
+  border-left: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
 }

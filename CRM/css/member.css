@@ -58,3 +58,80 @@
   border-radius: 29px;
   font-size: var(--font-16); font-weight: 600;
 }
+
+
+/********************************************************************
+              mypage style css
+********************************************************************/
+.memb-table {
+  margin-top: 15px;
+}
+
+/********************************************************************
+              table style css
+********************************************************************/
+.memb-table > table {
+  border: 1px solid var(--color-ligthGray);
+  background-color: var(--color-white);
+}
+.memb-table > table tr th,
+.memb-table > table tr td {
+  font-size: var(--font-12); font-weight: normal;
+  color: var(--color-fontColor); text-align: center;
+  padding: 12px 0;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--color-ligthGray);
+}
+.memb-table > table thead th {
+  font-weight: bold; font-size: var(--font-13);
+  background-color: #E7E7E7;
+}
+.memb-table > table tr:last-child td {
+  border-bottom: 0px;
+}
+.memb-table > table tr:nth-child(2n+2) td {
+  background-color: var(--color-snow);
+}
+.memb-table > .pagination-box {
+  margin-top: 30px; margin-bottom: 50px;
+}
+.memb-table > table tr td.left {
+  text-align: left;
+}
+.memb-table > table tr td a.down {
+  width: 80%;
+  margin: 0 auto; padding: 7px 0;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  color: var(--color-fontColor); font-weight: bold; font-size: var(--font-12);
+}
+.memb-table > table tr td a:hover.down {
+  background-color: var(--color-point); border-color: var(--color-point);
+  color: var(--color-white);
+}
+.memb-table > table tbody tr:hover,
+.memb-table > table tbody tr:nth-child(2n+2):hover td {
+  background-color: #e4f4fb;
+}
+.memb-table > table.table-link tr td.p0 {
+  padding: 0;
+}
+.memb-table > table tr td .day-item {
+  display: flex;
+  align-items: center; justify-content: center;
+}
+.day-item > span {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 24px; height: 22px;
+  border: 1px solid var(--color-ligthGray); border-radius: 3px;
+  background-color: var(--color-white);
+  margin-left: 5px;
+}
+.day-item > span:first-child {
+  margin-left: 0;
+}
+.day-item > span.active {
+  border-color: var(--color-point); background-color: var(--color-point);
+  color: var(--color-white);
+}

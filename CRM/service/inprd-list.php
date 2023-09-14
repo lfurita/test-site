@@ -11,35 +11,35 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                 <ul>
                     <li class="title">구분</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="1">손해보험</li>
-                                <li data-value="2">여행자보험</li>
-                                <li data-value="3">단체상해보험</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="">손해보험</option>
+                                <option value="">여행자보험</option>
+                                <option value="">단체상해보험</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">보험종목</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="11">영업배상책임</li>
-                                <li data-value="12">영업배상책임</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="">영업배상책임111</option>
+                                <option value="">영업배상책임222</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">보험사</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="11">삼성화재</li>
-                                <li data-value="12">DB손해보험</li>
-                                <li data-value="13">CHUBB</li>
-                                <li data-value="14">메리츠화재</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="" >삼성화재</option>
+                                <option value="" >메리츠화재</option>
+                                <option value="" >DB손해보험</option>
+                                <option value="" >몰라</option>
+                            </select>
                         </div>
                     </li>
 
@@ -61,7 +61,7 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
             </div>
             <div class="btn-box-conts">
                 <a href="" class="button search"><i class="icon-search"></i>검색</a>
-                <a href="/CRM/service/inprd-rrgstr.php" class="button point rgstr">등록</a>
+                <a href="/CRM/service/inprd-register.php" class="button point rgstr">등록</a>
             </div>
 
             <div class="table-box">

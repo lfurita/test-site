@@ -1,12 +1,12 @@
 <?php 
-$menuNo=[2,1,2];
+$menuNo=[2,2,1];
 include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php"; 
 ?>
     <div class="servContents">
         <?php include $_SERVER['DOCUMENT_ROOT']."/CRM/include/menu.php"; ?>
 
         <div class="conts-box">
-            <h1>고객 정보 관리</h1>
+            <h1>고객(사) 등록</h1>
 
             <div class="indvd-bsns">
                 <div class="selector">
@@ -34,14 +34,7 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     </li>
                     <li class="title">업종</li>
                     <li>
-                        <div class="select-box zindex3">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="1">업종1</li>
-                                <li data-value="2">업종2</li>
-                                <li data-value="3">업종3</li>
-                            </ul>
-                        </div>
+                        <input type="text" name="" id="" placeholder="업종 입력">
                     </li>
                     
                     <li class="title">대표자명</li>
@@ -89,14 +82,12 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     <li class="title">관리 채널</li>
                     <li class="fees">
                         <div class="radiobox">
-                            <input type="radio" id="oplin1" name="selector">
-                            <label for="oplin1">오프라인</label>
-                            <div class="check"><div class="inside"></div></div>
+                            <input id="offline" class="radio-custom" name="onoffGr" type="radio" checked>
+                            <label for="offline" class="radio-custom-label">오프라인</label>
                         </div>
-                        <div class="radiobox">
-                            <input type="radio" id="online1" name="selector">
-                            <label for="online1">온라인(유비즈)</label>
-                            <div class="check"><div class="inside"></div></div>
+                        <div class="radiobox disabled">
+                            <input id="online" class="radio-custom"name="onoffGr" type="radio">
+                            <label for="online" class="radio-custom-label">온라인(유비즈)</label>
                         </div>
                     </li>
 
@@ -143,14 +134,12 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     <li class="title">관리 채널</li>
                     <li class="fees">
                         <div class="radiobox">
-                            <input type="radio" id="oplin2" name="selector">
-                            <label for="oplin2">오프라인</label>
-                            <div class="check"><div class="inside"></div></div>
+                            <input id="offline2" class="radio-custom" name="onoff2Gr" type="radio" checked>
+                            <label for="offline2" class="radio-custom-label">오프라인</label>
                         </div>
-                        <div class="radiobox">
-                            <input type="radio" id="online2" name="selector">
-                            <label for="online2">온라인(유비즈)</label>
-                            <div class="check"><div class="inside"></div></div>
+                        <div class="radiobox disabled">
+                            <input id="online2" class="radio-custom"name="onoff2Gr" type="radio">
+                            <label for="online2" class="radio-custom-label">온라인(유비즈)</label>
                         </div>
                     </li>
                 </ul>

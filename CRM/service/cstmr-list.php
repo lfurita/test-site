@@ -15,13 +15,13 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     </li>
                     <li class="title">가입상품</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="1">손해보험</li>
-                                <li data-value="2">여행자보험</li>
-                                <li data-value="3">단체상해보험</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="" >손해보험</option>
+                                <option value="">여행자보험</option>
+                                <option value="">단체상해보험</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">계약 담당자</li>

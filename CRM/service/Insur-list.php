@@ -11,34 +11,35 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                 <ul>
                     <li class="title">구분</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="1">손해보험</li>
-                                <li data-value="2">여행자보험</li>
-                                <li data-value="3">단체상해보험</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>분류</option>
+                                <option value="" >손해보험</option>
+                                <option value="" >여행자보험</option>
+                                <option value="" >단체상해보험</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">보험사</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="11">삼성화재</li>
-                                <li data-value="12">메리츠화재</li>
-                                <li data-value="13">DB손해보험</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="" >삼성화재</option>
+                                <option value="" >메리츠화재</option>
+                                <option value="" >DB손해보험</option>
+                                <option value="" >몰라</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">부서/채널</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="21">GA</li>
-                                <li data-value="22">디지털</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="" >GA</option>
+                                <option value="" >디지털</option>
+                            </select>
                         </div>
                     </li>
 

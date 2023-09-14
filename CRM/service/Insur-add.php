@@ -13,26 +13,24 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     <li class="title">구분 *</li>
                     <li class="first">
                         <div class="radiobox">
-                            <input type="radio" id="insur1" name="selector">
-                            <label for="insur1">손해보험</label>
-                            <div class="check"><div class="inside"></div></div>
+                            <input id="in1" class="radio-custom" name="insurance" type="radio" checked>
+                            <label for="in1" class="radio-custom-label">손해보험</label>
                         </div>
-                        <div class="radiobox"> <!-- class="radiobox disabled" 비활성시 class에 "disabled" 넣기 -->
-                            <input type="radio" id="insur2" name="selector">
-                            <label for="insur2">생명보험</label>
-                            <div class="check"><div class="inside"></div></div>
+                        <div class="radiobox">
+                            <input id="in2" class="radio-custom"name="insurance" type="radio">
+                            <label for="in2" class="radio-custom-label">생명보험</label>
                         </div>
                     </li>
 
                     <li class="title">보험사명 *</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">선택</li>
-                                <li data-value="1">손해보험</li>
-                                <li data-value="2">여행자보험</li>
-                                <li data-value="3">단체상해보험</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>선택</option>
+                                <option value="">손해보험</option>
+                                <option value="">여행자보험</option>
+                                <option value="">단체상해보험</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title">부서 *</li>
@@ -61,21 +59,22 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     
                     <li class="title">내부 담당</li>
                     <li>
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">부서 선택</li>
-                                <li data-value="1">총무팀</li>
-                                <li data-value="1">인사팀</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>부서선택</option>
+                                <option value="">총무팀</option>
+                                <option value="">인사팀</option>
+                                <option value="">몰라팀</option>
+                            </select>
                         </div>
                         /
-                        <div class="select-box">
-                            <ul class="list-unstyled">
-                                <li class="init">담당자 선택</li>
-                                <li data-value="1">홍길동 부장</li>
-                                <li data-value="2">홍길순 팀장</li>
-                                <li data-value="3">김아무개 대리</li>
-                            </ul>
+                        <div class="select-custom">
+                            <select name="" id="">
+                                <option value="" selected>담당자선택</option>
+                                <option value="">홍길동 부장</option>
+                                <option value="">홍길순 팀장</option>
+                                <option value="">김아무개 대리</option>
+                            </select>
                         </div>
                     </li>
                     <li class="title"></li>

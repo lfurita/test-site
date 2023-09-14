@@ -16,6 +16,7 @@
   <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="/CRM/css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="/CRM/css/style.css?v=<?=time()?>">
   <link rel="stylesheet" type="text/css" href="/CRM/css/basic.css?v=<?=time()?>">
   <link rel="stylesheet" type="text/css" href="/CRM/css/button.css?v=<?=time()?>">
@@ -23,4 +24,5 @@
   <link rel="stylesheet" type="text/css" href="/CRM/css/service.css?v=<?=time()?>">
 
   <script type="text/javascript" src="/CRM/js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="/CRM/js/jquery-ui.js"></script>
 </head>
