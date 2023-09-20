@@ -25,12 +25,13 @@
 		<div class="inner">
             <h4>연관 보험</h4>
             <ul class="clearfix inb sub-main-box">
+                <!-- 적하 및 운송보험 start -->
                 <li>
                     <div class="box-list">
-                        <a href="trnIns.php">
+                        <a href="cargo-logis.php">
                             <div class="text-title">
-                                <strong>적하보험</strong>
-                                <p class="eng">Cargo</p>
+                                <strong>적하 및 운송보험</strong>
+                                <p class="eng">Cargo and<br>Logistics</p>
                             </div>
                             <div class="btn-plus">
                                 <span class="plus-box">
@@ -43,9 +44,33 @@
                         </a>
                     </div>
                 </li>
+                <!-- 적하 및 운송보험 end -->
+
+                <!-- 적하보험 start -->
                 <li>
                     <div class="box-list">
-                        <a href="">
+                        <a href="cargo.php">
+                            <div class="text-title">
+                                <strong>적하보험</strong>
+                                <p class="eng">Cargo</p>
+                            </div>
+                            <div class="btn-plus">
+                                <span class="plus-box">
+                                    <i class="icon-plus">+</i>
+                                </span>
+                            </div>
+                            <div class="img-back">
+                                <img src="/bis/img/sub/bnner-img-cargo.jpg?e" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <!-- 적하보험 end -->
+
+                <!-- 운송보험 start -->
+                <li>
+                    <div class="box-list">
+                        <a href="logistics.php">
                             <div class="text-title">
                                 <strong>운송보험</strong>
                                 <p class="eng">Logistics</p>
@@ -61,64 +86,12 @@
                         </a>
                     </div>
                 </li>
-                <li>
-                    <div class="box-list">
-                        <a href="">
-                            <div class="text-title">
-                                <strong>해상보험</strong>
-                                <p class="eng">Marine</p>
-                            </div>
-                            <div class="btn-plus">
-                                <span class="plus-box">
-                                    <i class="icon-plus">+</i>
-                                </span>
-                            </div>
-                            <div class="img-back">
-                                <img src="/bis/img/sub/bnner-img-marine.jpg?eni" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </li>
+                <!-- 운송보험 end -->
                 
+                <!-- 해상보험 start -->
                 <li>
                     <div class="box-list">
-                        <a href="">
-                            <div class="text-title">
-                                <strong>적하보험</strong>
-                                <p class="eng">Cargo</p>
-                            </div>
-                            <div class="btn-plus">
-                                <span class="plus-box">
-                                    <i class="icon-plus">+</i>
-                                </span>
-                            </div>
-                            <div class="img-back">
-                                <img src="/bis/img/sub/bnner-img-cargo.jpg?eni" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="box-list">
-                        <a href="">
-                            <div class="text-title">
-                                <strong>운송보험</strong>
-                                <p class="eng">Logistics</p>
-                            </div>
-                            <div class="btn-plus">
-                                <span class="plus-box">
-                                    <i class="icon-plus">+</i>
-                                </span>
-                            </div>
-                            <div class="img-back">
-                                <img src="/bis/img/sub/bnner-img-logistics.jpg?eni" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="box-list">
-                        <a href="">
+                        <a href="marine.php">
                             <div class="text-title">
                                 <strong>해상보험</strong>
                                 <p class="eng">Marine</p>
@@ -134,6 +107,7 @@
                         </a>
                     </div>
                 </li>
+                <!-- 해상보험 end -->
             </ul>
 		</div>
 	</div>
@@ -142,4 +116,4 @@
 </section>
 <!-- Contents end **/ -->
 
-<?php include '../../layout/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/bis/layout/footer.php"; ?>

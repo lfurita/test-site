@@ -5,7 +5,8 @@
   <meta name="robots" content="noindex">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
-  
+  <title>㈜비아이에스</title>
+
   <meta name="title" content="㈜비아이에스 | BIS">
   <meta name="keywords" content="㈜비아이에스,bis,cbis.co.kr,비아이에스홈페이지,보험,기업보험,여행자보험,상해보험,화재보험,어린이보험,치아보험">
   <meta name="description" content="㈜비아이에스는 기업에게 반드시 필요한 보험, 입찰, 보험료, 손해율관리 등 보험 서비스를 다양한 그룹의 고객들에게 제공합니다.">
@@ -13,32 +14,30 @@
   <meta property="og:title" content="㈜비아이에스 | BIS">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bis.co.kr/">
-  <meta property="og:image" content="https://bis.co.kr/img/mobile_212852414260.png?t">
+  <meta property="og:image" content="https://bis.co.kr/img/mobile_212852414260.png?e">
   <meta property="og:description" content="㈜비아이에스는 기업에게 반드시 필요한 보험, 입찰, 보험료, 손해율관리 등 보험 서비스를 다양한 그룹의 고객들에게 제공합니다.">
-
-  <title>㈜비아이에스</title>
   
   <!-- /** style css -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/basic.css">
+  <link rel="stylesheet" type="text/css" href="/bis/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/bis/css/basic.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/button.css">
-  <link rel="stylesheet" type="text/css" href="css/main.mobile.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/bis/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/bis/css/button.css">
+  <link rel="stylesheet" type="text/css" href="/bis/css/main.mobile.css">
+  <link rel="stylesheet" href="/bis/css/animate.css">
 
   <!-- /** JavaScript -->
-  <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/bis/js/jquery-3.6.1.min.js"></script>
+  <script src="/bis/js/script.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header id="main">
-        <h1>
-            <a href="index.php" class="mainW"><img src="img/common/logo_White.png?t" alt="㈜비아이에스 로고"></a>
-            <a href="index.php" class="mainB"><img src="img/common/logo.png?t" alt="㈜비아이에스 로고"></a>
-        </h1>
+        <div class="logo-wrap">
+            <a href="index.php" class="mainW"><img src="/bis/img/common/logo_White.png?te" alt="㈜비아이에스 로고"></a>
+            <a href="index.php" class="mainB"><img src="/bis/img/common/logo.png?te" alt="㈜비아이에스 로고"></a>
+        </div>
         <?php include 'layout/gnb.php'; ?>
     </header>
 

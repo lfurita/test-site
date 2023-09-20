@@ -37,30 +37,30 @@ header#main.activated:after {
 header#main:after {
   border-bottom: 1px solid rgba(255, 255, 255, .25);
 }
-header h1 {
+header .logo-wrap {
   position: absolute; top: 0; left: 50%;
   transform: translateX(-50%);
   width: 1200px;
   margin: 0 auto 0;
 }
-header h1 a {
+header .logo-wrap a {
   display: block;
   margin-top: 21px;
 }
-header#main h1 a.sub {
+header#main .logo-wrap a.sub {
   display: none;
 }
-header#main.activated h1 a.mainW {
+header#main.activated .logo-wrap a.mainW {
   display: none;
 }
-header#main.activated h1 a.mainB {
+header#main.activated .logo-wrap a.mainB {
   display: block;
 }
-header h1 a.mainW {
+header .logo-wrap a.mainW {
   display: block;
   margin-top: 21px;
 }
-header h1 a.mainB {
+header .logo-wrap a.mainB {
   display: none;
   margin-top: 21px;
 }
@@ -218,7 +218,6 @@ header#main.activated .mobile .open-menu .all .ir {
 }
 .mobile-gnb {
   display: block;
-  vertical-align: middle;
   margin-top: 5rem;
 }
 .mobile-gnb li {
@@ -240,9 +239,6 @@ header#main.activated .mobile .open-menu .all .ir {
   margin: 0 auto;
   padding: 1rem;
   background-color: var(--color-snow);
-}
-.mobile-gnb li .inner.show {
-  /*display: block;*/
 }
 .mobile-gnb li .inner li {
   width: calc(100% - 1rem);
@@ -384,6 +380,8 @@ header#main.activated .mobile .open-menu .all .ir {
   justify-content: flex-start;
 }
 .sub-bis-visual .visual-box-wrap > .inner {
+  display: flex;
+  flex-direction: column; justify-content: center;
   width: 100%; max-width: 1200px;
   padding: 0 0px; margin: 0 auto;
 }
@@ -391,9 +389,14 @@ header#main.activated .mobile .open-menu .all .ir {
   width: 100%; max-width: 1200px;
   padding: 0 0px; margin: 0 auto;
 }
-.sub-bis-visual .visual-box-wrap > .inner h3,
-.sub-bis-visual > .inner h3 {
+.sub-bis-visual .visual-box-wrap > .inner h3, .sub-bis-visual > .inner h3,
+.sub-bis-visual .visual-box-wrap > .inner h1, .sub-bis-visual > .inner h1 {
+  display: flex;     flex-direction: column;
   text-align: left; font-weight: 700; color: var(--color-white);
+  font-size: var(--font-38);
+}
+.sub-bis-visual .visual-box-wrap > .inner h1 > span {
+  color: var(--color-white);
 }
 .sub-bis-visual .visual-box-wrap > .inner h3 .eng,
 .sub-bis-visual > .inner h3 .eng {
@@ -419,6 +422,15 @@ header#main.activated .mobile .open-menu .all .ir {
   font-family: 'Playfair Display', serif;  font-weight: 400;
   color: var(--color-white);
 }
+.sub-bis-visual .visual-box-wrap > .inner > a {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 150px; height: 42px;
+  border: 1px solid rgba(255, 255, 255, .75);
+  color: var(--color-white); font-size: var(--font-15);
+  margin-top: 10px;
+}
+
 .inner strong {
   display: block;
   font-size: var(--fS-title-1-55);
@@ -543,11 +555,89 @@ footer .copyr-wrap .brand-wrap a.link-text:hover {
   transform: translate(-50%, -50%);
   width: 10px;
 }
+.top-btn-wrap .top-btn:hover {
+  background-color: var(--color-blue);
+}
 
 
 /*********************************************************
         PC Basic area  
 */
+
+i.icon-step-01 {
+  -webkit-mask: url('../img/sub/icon-step-01.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-01.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-step-02 {
+  -webkit-mask: url('../img/sub/icon-step-02.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-02.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-step-03 {
+  -webkit-mask: url('../img/sub/icon-step-03.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-03.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-step-04 {
+  -webkit-mask: url('../img/sub/icon-step-04.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-04.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-step-05 {
+  -webkit-mask: url('../img/sub/icon-step-05.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-05.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-step-06 {
+  -webkit-mask: url('../img/sub/icon-step-06.svg') no-repeat center;
+          mask: url('../img/sub/icon-step-06.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-service-01 {
+  -webkit-mask: url('../img/sub/icon-service-01.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-01.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-service-02 {
+  -webkit-mask: url('../img/sub/icon-service-02.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-02.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-service-03 {
+  -webkit-mask: url('../img/sub/icon-service-03.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-03.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-credit-01 {
+  -webkit-mask: url('../img/sub/icon-service-01.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-01.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-credit-02 {
+  -webkit-mask: url('../img/sub/icon-service-02.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-02.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-credit-03 {
+  -webkit-mask: url('../img/sub/icon-service-03.svg') no-repeat center;
+          mask: url('../img/sub/icon-service-03.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-circle-check {
+  -webkit-mask: url('../img/sub/icon-circle-check.svg') no-repeat center;
+          mask: url('../img/sub/icon-circle-check.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+
+/********************************************************************
+              etc area style css
+********************************************************************/
+.type-dash {
+  text-indent: -10px;
+  padding-left: 10px;
+}
 
 
 
@@ -582,10 +672,10 @@ footer .copyr-wrap .brand-wrap a.link-text:hover {
 
 @media only screen and (max-width:1260px) and (min-width:1101px){
   /********************** 1260 해상도 공통 css */
-  header h1 {
+  header .logo-wrap {
     width: 970px;
   }
-  header h1 a.mainW, header h1 a.mainB {
+  header .logo-wrap a.mainW, header .logo-wrap a.mainB {
     margin-top: 17px;
   }
   footer .copyr-wrap {

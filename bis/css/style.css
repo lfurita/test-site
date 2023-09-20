@@ -98,7 +98,7 @@ select {
   border-radius:0;          /* 아이폰 사파리 보더 없애기 */ 
   -webkit-appearance:none;  /* 화살표 없애기 for chrome*/ 
      -moz-appearance:none;  /* 화살표 없애기 for firefox*/ 
-          appearance:none   /* 화살표 없애기 공통*/ 
+          appearance:none;  /* 화살표 없애기 공통*/ 
 }
 
 .clearfix:after {
@@ -134,12 +134,29 @@ h3.eng {
   font-family: 'Playfair Display', serif;
 }
 
+.mgT24 {
+  margin-top: 24px !important;
+}
+.mgT30 {
+  margin-top: 30px !important;
+}
+.mgT50 {
+  margin-top: 50px !important;
+}
+.mgT80 {
+  margin-top: 80px !important;
+}
+.mgB24 {
+  margin-bottom: 24px !important;
+}
+
+
 /******************************************************************
            input & textarea Style Css 
 ***********************/
 input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
 textarea {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box; 
@@ -302,6 +319,7 @@ label.checkbox span::after {
 :root {
   /* color style */
   --point-color: #2498CC;
+  --color-fontGray: #757575;
   --color-black: #000;
   --color-white: #fff;
   --color-gray: #898989;
@@ -326,6 +344,15 @@ label.checkbox span::after {
   --ffam-nanuSQ: 'NanumSquare', sans-serif;
 
   /* font size style */
+  --font-15: 15px;
+  --font-18: 18px;
+  --font-22: 22px;
+  --font-25: 25px;
+  --font-28: 28px;
+  --font-38: 38px;
+  --font-48: 48px;
+
+
   --fS-txt-00: 0rem;
 
   --fS-title-5: 5rem;

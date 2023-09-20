@@ -22,13 +22,13 @@
   <title>㈜비아이에스</title>
   
   <!-- /** style css -->
+  <link rel="stylesheet" href="/bis/css/animate.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/style.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/basic.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/sub.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/button.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/sub.css">
   <link rel="stylesheet" type="text/css" href="/bis/css/sub.mobile.css">
-  <link rel="stylesheet" href="/bis/css/animate.css">
 
   <!-- /** JavaScript -->
   <script src="/bis/js/jquery-3.6.1.min.js"></script>
@@ -38,9 +38,9 @@
 </head>
 <body>
     <header>
-        <h1>
+        <div class="logo-wrap">
             <a href="/bis/index.php"><img src="/bis/img/common/logo.png" alt="㈜비아이에스 로고"></a>
-        </h1>
+        </div>
         <?php 
         include $_SERVER['DOCUMENT_ROOT']."/bis/layout/gnb.php";
         ?>

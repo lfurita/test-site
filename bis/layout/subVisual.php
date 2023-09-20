@@ -8,9 +8,60 @@
 		<i class="icon-home"></i>
 		<span>보험 서비스</span>
 		<i class="icon-contour"></i>
-		<span>기업 서비스</span>
+		<strong>기업 보험</strong>
 		<i class="icon-contour"></i>
 		<strong>적하 및 운송보험</strong>
+	</div>
+	<h2>
+		<span class="short"><strong>기업 리스크 관리</strong>에 필요한</span>
+		<span class="short"><strong class="point-sky">맞춤형 보험 솔루션</strong>을 제공합니다.</span>
+	</h2>
+</div>
+
+<!-- /******************************** 적하보험 -->
+<? elseif($mNum==1 && $sNum==1 && $ssNum==2): ?>
+<div class="sub-visual-wrap">
+	<div class="location">
+		<i class="icon-home"></i>
+		<span>보험 서비스</span>
+		<i class="icon-contour"></i>
+		<strong>기업 보험</strong>
+		<i class="icon-contour"></i>
+		<strong>적하보험</strong>
+	</div>
+	<h2>
+		<span class="short"><strong>기업 리스크 관리</strong>에 필요한</span>
+		<span class="short"><strong class="point-sky">맞춤형 보험 솔루션</strong>을 제공합니다.</span>
+	</h2>
+</div>
+
+<!-- /******************************** 운송보험 -->
+<? elseif($mNum==1 && $sNum==1 && $ssNum==3): ?>
+<div class="sub-visual-wrap">
+	<div class="location">
+		<i class="icon-home"></i>
+		<span>보험 서비스</span>
+		<i class="icon-contour"></i>
+		<strong>기업 보험</strong>
+		<i class="icon-contour"></i>
+		<strong>운송보험</strong>
+	</div>
+	<h2>
+		<span class="short"><strong>기업 리스크 관리</strong>에 필요한</span>
+		<span class="short"><strong class="point-sky">맞춤형 보험 솔루션</strong>을 제공합니다.</span>
+	</h2>
+</div>
+
+<!-- /******************************** 해상보험 -->
+<? elseif($mNum==1 && $sNum==1 && $ssNum==4): ?>
+<div class="sub-visual-wrap">
+	<div class="location">
+		<i class="icon-home"></i>
+		<span>보험 서비스</span>
+		<i class="icon-contour"></i>
+		<strong>기업 보험</strong>
+		<i class="icon-contour"></i>
+		<strong>해상보험</strong>
 	</div>
 	<h2>
 		<span class="short"><strong>기업 리스크 관리</strong>에 필요한</span>

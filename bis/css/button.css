@@ -56,6 +56,15 @@
   border: 1px solid var(--color-white); color: var(--color-white);
 }
 
+.gradation {
+  background-color: var(--color-white); border: 1px solid #15AFF4; border-radius: 3px;
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.1);
+}
+.gradation:hover {
+  background: linear-gradient(180deg, rgba(103,235,211,1) 0%, rgba(21,175,244,1) 100%);
+  border-color: rgba(103,235,211,1);
+}
+
 
 .round {
   border-radius: 35px;

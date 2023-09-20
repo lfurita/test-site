@@ -1,5 +1,5 @@
-<? $mNum = "1";  $sNum = "2"; ?>
-<?php include '../layout/header.php'; ?>
+<? $mNum = "1";  $sNum = "3";  $ssNum = "0"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/bis/layout/header.php"; ?>
 
 <!-- /** Contents start -->
 <section class="content-wrap">
@@ -7,24 +7,24 @@
 	<div class="sub-bis-visual">
 		<div class="visual-box-wrap">
 			<div class="inner">
-				<h3>여행자 보험</h3>
+				<h3>건강 보험</h3>
 				<p>매일매일 새롭게 달라지는 비아이에스 소식을신속하고 정확하게 전달해 드립니다.</p>
 			</div>
-			<div class="traveler-visual"></div>
+			<div class="health-visual"></div>
 		</div>
 	</div>
 
-	<!-- /** 여행자 보험 start -->
-	<div class="service-wrap traveler">
+	<!-- /** 건강 보험 start -->
+	<div class="service-wrap health">
 		<div class="inner">
             <ul class="clearfix inb sub-main-box">
-                <!-- 국내 여행자 start -->
+                <!-- 건강보험 start -->
                 <li>
                     <div class="box-list">
-						<a href="#"> <!-- domestic.php -->
+						<a href="domestic.php">
                             <div class="text-title">
-                                <strong>국내 여행자 보험</strong>
-                                <p class="eng">Domestic <br>travel</p>
+                                <strong>건강보험</strong>
+                                <p class="eng">Health <br>Insurance</p>
                             </div>
                             <div class="btn-plus">
                                 <span class="plus-box">
@@ -32,20 +32,20 @@
                                 </span>
                             </div>
                             <div class="img-back">
-                                <img src="/bis/img/sub/service-traveler-bnner-01.jpg?e" alt="">
+                                <img src="/bis/img/sub/service-health-bnner-01.png?e" alt="">
                             </div>
                         </a>
                     </div>
                 </li>
-                <!-- 국내 여행자 end -->
+                <!-- 건강보험 end -->
 
-                <!-- 해외 여행자 start -->
+                <!-- title start -->
                 <li>
                     <div class="box-list">
-                        <a href="#"> <!-- overseas.php -->
+                        <a href="dental.php">
                             <div class="text-title">
-                                <strong>해외 여행자 보험</strong>
-                                <p class="eng">Overseas <br>travel</p>
+                                <strong>치아보험</strong>
+                                <p class="eng">Dental <br>Insurance</p>
                             </div>
                             <div class="btn-plus">
                                 <span class="plus-box">
@@ -53,20 +53,20 @@
                                 </span>
                             </div>
                             <div class="img-back">
-                                <img src="/bis/img/sub/service-traveler-bnner-02.jpg?e" alt="">
+                                <img src="/bis/img/sub/service-health-bnner-02.png?e" alt="">
                             </div>
                         </a>
                     </div>
                 </li>
-                <!-- 해외 여행자 end -->
+                <!-- title end -->
 
-                <!-- 장기 여행자 start -->
+                <!-- 암보험 start -->
                 <li>
                     <div class="box-list">
-						<a href="#"> <!-- long-term.php -->
+						<a href="cancer.php">
                             <div class="text-title">
-                                <strong>장기 여행자 보험</strong>
-                                <p class="eng">Long Time <br>travel</p>
+                                <strong>암보험</strong>
+                                <p class="eng">Cancer <br>Insurance</p>
                             </div>
                             <div class="btn-plus">
                                 <span class="plus-box">
@@ -74,19 +74,18 @@
                                 </span>
                             </div>
                             <div class="img-back">
-                                <img src="/bis/img/sub/service-traveler-bnner-03.jpg?e" alt="">
+                                <img src="/bis/img/sub/service-health-bnner-03.png?e" alt="">
                             </div>
                         </a>
                     </div>
                 </li>
-                <!-- 장기 여행자 end -->
+                <!-- 암보험 end -->
             </ul>
 		</div>
 	</div>
-	<!-- 여행자 보험 end **/ -->
+	<!-- 건강 보험 end **/ -->
+
 </section>
 <!-- Contents end **/ -->
 
-<script>
-</script>
-<?php include '../layout/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT']."/bis/layout/footer.php"; ?>

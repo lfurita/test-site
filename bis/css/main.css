@@ -18,10 +18,10 @@
 
 /************************************************************************** main Visual :: img area */
 .mainVisual .swiper .swiper-slide.visual-01 .main-visual-pc-img {
-  background: #252525 url('../img/main/mainVisual-01.jpg') no-repeat 50% 50%;
+  background: #252525 url('../img/main/mainVisual-01.jpg?e') no-repeat 50% 50%;
 }
 .mainVisual .swiper .swiper-slide.visual-02 .main-visual-pc-img {
-  background: #252525 url('../img/main/mainVisual-02.jpg') no-repeat 50% 50%;
+  background: #252525 url('../img/main/mainVisual-02.jpg?e') no-repeat 50% 50%;
 }
 .mainVisual .swiper .swiper-slide .main-visual-pc-img {
   width: 100%; height: 100%;

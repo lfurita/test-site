@@ -6,16 +6,16 @@
 				<ul class="depth2">
 					<li><a href="/bis/service/company/index.php">기업 보험</a></li>
 					<li><a href="/bis/service/traveler.php">여행자 보험</a></li>
-					<li><a href="/bis/service/health.php">건강 보험</a></li>
+					<li><a href="/bis/service/health/index.php">건강 보험</a></li>
 					<li><a href="/bis/service/vouch.php">보증 보험</a></li>
-					<li><a href="/bis/service/claim.php">보험 청구/보상</a></li>
+					<li><a href="/bis/service/claim.php">보험 청구</a></li>
 				</ul>
 			</li>
 			<li><a class="gnb-depth2 <?=($mNum==2)?"active":""?>">비지니스</a>
 				<ul class="depth2">
 					<li><a href="/bis/business/digital.php">디지털</a></li>
 					<li><a href="/bis/business/creditRating.php">기업신용평가</a></li>
-					<li><a href="/bis/business/longRental.php">장기렌트</a></li>
+					<!--li><a href="/bis/business/longRental.php">장기렌트</a></li-->
 				</ul>
 			</li>
 			<li><a class="gnb-depth3 <?=($mNum==3)?"active":""?>">고객센터</a>
@@ -135,6 +135,5 @@
 			$this.next().slideToggle(350);
 		}
 	});
-
 </script>
 <!-- /** 모바일 Nav Area end -->
