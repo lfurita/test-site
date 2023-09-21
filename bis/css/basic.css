@@ -425,10 +425,10 @@ header#main.activated .mobile .open-menu .all .ir {
 .sub-bis-visual .visual-box-wrap > .inner > a {
   display: flex;
   justify-content: center; align-items: center;
-  width: 150px; height: 42px;
+  width: 180px; height: 48px;
   border: 1px solid rgba(255, 255, 255, .75);
   color: var(--color-white); font-size: var(--font-15);
-  margin-top: 10px;
+  margin-top: 10px; padding: 0;
 }
 
 .inner strong {
@@ -441,7 +441,7 @@ header#main.activated .mobile .open-menu .all .ir {
 }
 .sub-bis-visual.depth .visual-box-wrap > .inner a.white-line {
   margin-top: 1.75rem;
-  width: 200px;
+  width: 180px;
 }
 
 

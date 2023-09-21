@@ -14,7 +14,7 @@
 					고객과 함께 최고의 기업으로 같이 성장해 나아가는 것이 저희의 Vision입니다.<br>
 					지금 Usoft의 최상의 서비스를 경험해 보세요.
 				</p>
-				<a href="">상담문의</a>
+                <a href="#;" class="button white-line">상담문의</a>
 			</div>
 			<div class="digital-visual"></div>
 		</div>

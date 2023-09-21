@@ -11,7 +11,7 @@
 					<span class="eng">Corporate Credit Rating</span>
 				</h1>
 				<p>매일매일 새롭게 달라지는 비아이에스 소식을신속하고 정확하게 전달해 드립니다.</p>
-				<a href="">상담문의</a>
+                <a href="#;" class="button white-line">상담문의</a>
 			</div>
 			<div class="credit-visual"></div>
 		</div>
