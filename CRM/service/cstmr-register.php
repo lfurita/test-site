@@ -105,7 +105,7 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                 </ul>
                 <!-- 법인 사업자 end -->
 
-                <!-- 개인 start -->
+                <!-- 개인 start --
                 <ul>
                     <li class="title">성명 *</li>
                     <li>

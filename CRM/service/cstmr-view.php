@@ -34,7 +34,8 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     </li>
                     <li class="title">업종</li>
                     <li>
-                        <div class="select-custom">
+                        <input type="text" name="" id="" placeholder="업종 입력">
+                        <!--div class="select-custom">
                             <select name="" id="">
                                 <option value="" selected>선택</option>
                                 <option value="" >통신판매업</option>
@@ -43,7 +44,7 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                                 <option value="">건설업</option>
                                 <option value="">기타..... 모르겠다...</option>
                             </select>
-                        </div>
+                        </div-->
                     </li>
                     
                     <li class="title">대표자명</li>
