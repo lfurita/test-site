@@ -236,7 +236,7 @@ include $_SERVER['DOCUMENT_ROOT']."/ubiz/include/sub-visual.php";
                         <li class="type-dot">이 보험 개시 이전 다른 보험에 고지된 사정 또는 사고로인한 배상청구</li>
                         <li class="type-dot">기타 약관에서 정한 보상하지 않는 손해에 대한 배상책임</li>
 
-                        <li class="subsc">※ 위 보상하지않는 내용은 보험사마다 차이가 발생할 수 있으며 자세한 내용은 보험사 약관을 참조하시길 바랍니다.</li>
+                        <li class="subsc">※ 위 보상하는 내용은 보험사마다 차이가 발생할 수 있으며 자세한 내용은 보험사 약관을 참조하시길 바랍니다.</li>
                     </ul>
                 </div>
 

@@ -22,16 +22,16 @@
 
   <link rel="shortcut icon" href="/img/favicon.png">
   
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/style.css?v=<?=time()?>">
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/swiper-bundle.min.css?v=<?=time()?>">
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/basic.css?v=<?=time()?>">
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/button.css?v=<?=time()?>">
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/animate.css?v=<?=time()?>">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/basic.css">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/button.css">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/animate.css">
 
   <? if($menuNo[0]==0): ?>
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/main.css?v=<?=time()?>">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/main.css">
   <? else: ?>
-  <link rel="stylesheet" type="text/css" href="/ubiz/css/content.css?v=<?=time()?>">
+  <link rel="stylesheet" type="text/css" href="/ubiz/css/content.css">
   <? endif ?>
 
   <script type="text/javascript" src="/ubiz/js/jquery-3.6.1.min.js"></script>

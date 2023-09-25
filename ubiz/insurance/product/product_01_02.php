@@ -1,4 +1,4 @@
- <?php
+<?php
 $menuNo=[1,2,1];
 include $_SERVER['DOCUMENT_ROOT']."/ubiz/include/header.php";
 include $_SERVER['DOCUMENT_ROOT']."/ubiz/include/sub-visual.php";

@@ -1,0 +1,355 @@
+.downupPopup {
+  position: fixed; bottom: 0; left: 50%; z-index: 99;
+  overflow: hidden;
+  will-change: transform;
+  background-color: #fff;
+  height: calc(100vh - 50px);
+}
+.downupPopup.no-act {
+  transform: translate(-50%, 100vh) !important;
+}
+.downupPopup-header {
+  padding: 2vh 15px;
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+}
+.downupPopup-header > span {
+  font-size: var(--font-size-20); font-weight: 700;
+  color: var(--color-white);
+}
+.downupPopup-header .downupPopup-kapat {
+  align-self: center;
+  font-size: var(--font-size-20); stroke: var(--color-white); stroke-width: 3;
+  cursor: pointer; 
+}
+.downupPopup-content {
+  height: 74.5vh !important;
+}
+#dark-back {
+  top: 0; left: 0; z-index: 90;
+  width: 100%; height: 100%;
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.75);
+  padding-right: 17px;
+  overflow: hidden;
+}
+.downupPopup-content > .cont-box-wrap {
+ margin: 1.25rem;
+}
+.downupPopup-content > p {
+  font-size: var(--font-size-13); font-weight: 300; line-height: 1.4;
+  margin: 1.25rem;
+}
+
+
+/*********************************************************************************************
+              상품안내 Style css
+**************************************************/ 
+/**************************************** 상단 배너 영역 css */
+.prod-bnnr {
+  display: flex;
+  flex-wrap: nowrap; flex-direction: row; justify-content: space-between; align-items: center;
+  background-color: var(--color-snow);
+  padding: 1.25rem 4%;
+  width: calc(100% - 8%);
+}
+.prod-bnnr .box-list {
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: flex-start;
+  width: 5.75rem;
+}
+.prod-bnnr .box-list > .circle {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 5.75rem; height: 5.75rem;
+  background-color: var(--color-white); border-radius: 100%;
+}
+.prod-bnnr .box-list > .circle > img {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: auto; height: 74px;
+  font-size: 0;
+  color: transparent;
+}
+.prod-bnnr .box-list > strong {
+  margin-top: .9375rem;
+  font-size: var(--font-size-13); font-weight: 700;
+  color: var(--color-fontColor);
+}
+
+/**************************************** 상품설명 영역 css */
+.downupPopup-content .cont-product > h3 {
+  margin: 1.25rem 1.25rem 0;
+  font-size: var(--font-size-22);
+}
+.downupPopup-content .cont-product .bnnr-box {
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap;
+  padding: .625rem 1.25rem 0;  
+}
+.bnnr-box .round-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start;
+  width: 100%; height: 105px;
+  margin-top: .55rem;
+  border-radius: 15px;
+}
+.bnnr-box .round-box:first-child {
+  margin-top: 0;
+}
+.bnnr-box .round-box:nth-child(1) {
+  background: linear-gradient(90deg, #18B6FA 0%, #74E8D3 100%);
+}
+.bnnr-box .round-box:nth-child(2) {
+  background: linear-gradient(90deg, #3AA1FF 0%, #73DFF6 100%);
+}
+.bnnr-box .round-box:nth-child(3) {
+  background: linear-gradient(90deg, rgba(71,128,246,1) 0%, rgba(107,158,255,1) 100%);
+}
+.bnnr-box .round-box .title {
+  padding: 1.25rem; padding-bottom: 0; padding-left: 1rem;
+  width: calc(100% - 40%);
+}
+.bnnr-box .round-box i {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 55px; height: 55px;
+  font-size: 0;
+  background-color: rgba(255, 255, 255, .48); border-radius: 15px;
+  margin: 1.25rem;  margin-right: 0;
+}
+.bnnr-box .round-box i:before {
+  content: "";
+  display: block;
+  width: 28px; height: 28px;
+}
+.bnnr-box .round-box i.icon-medical:before {
+  background: url('/new2023/img//trip/icon-medical.svg?en') no-repeat;
+  background-size: 100%;
+}
+.bnnr-box .round-box i.icon-actual:before {
+  background: url('/new2023/img/trip/icon-actual.svg?en') no-repeat;
+  background-size: 100%;
+}
+.bnnr-box .round-box i.icon-language:before {
+  background: url('/new2023/img/trip/icon-language.svg?en') no-repeat;
+  background-size: 100%;
+}
+.bnnr-box .round-box .title > strong {
+  display: flex;
+  flex-direction: column; justify-content: flex-start; align-items: flex-start;
+  font-size: var(--font-size-15); font-weight: 700;
+  color: var(--color-white); line-height: 1.2;
+  word-break: keep-all;
+}
+.bnnr-box .round-box .title > p {
+  font-size: var(--font-size-12); font-weight: 400;
+  color: var(--color-white);
+  padding: .25rem 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.35);
+  word-break: keep-all;
+}
+.downupPopup-content .bottom-box {
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap; align-items: flex-start;
+  margin: 1.25rem 1.25rem 2rem;
+  /* padding-bottom: 1.25rem; */
+}
+.downupPopup-content .bottom-box .text {
+  font-size: var(--font-size-12); font-weight: 400;
+  color: var(--color-fontGray);
+}
+.downupPopup-content .bottom-box .img {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  height: 1.55rem; width: auto;
+}
+.downupPopup-content .bottom-box .img img {
+  height: 100%; width: auto;
+}
+
+
+
+/*********************************************************************************************
+              상품안내 Style css
+**************************************************/ 
+.modal-sbscr .downupPopup-content {
+  height: 73vh  !important;
+}
+.sbscr-box-list {
+  display: flex;
+  flex-direction: column; align-items: flex-start;
+  width: 90%;
+  margin: 0 auto; margin-top: 1.55rem; padding-bottom: 1.55rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+.sbscr-box-list:last-child {
+  margin-bottom: 1.875rem;
+}
+.sbscr-box-list > h2 {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center;
+  font-size: var(--font-size-18); font-weight: 500;
+}
+.sbscr-box-list > h2 > a {
+  width: 80px; height: 1.25rem; line-height: 1.25rem;
+  font-size: var(--font-size-13); font-weight: 500; color: var(--color-red);
+  border: 1px solid var(--color-red); border-radius: 18px;
+  margin-left: .55rem;
+}
+.sbscr-box-list > .text-area {
+  font-size: var(--font-size-13); font-weight: 400;
+  color: var(--color-fontGray);
+  padding: .4375rem 0 0 1.225rem;
+}
+
+
+
+/*********************************************************************************************
+              알아두실사항 Style css
+**************************************************/
+.ncsrl-box > h3, .notes-box > h3 {
+  font-size: var(--font-size-20); font-weight: 700;
+}
+.ncsrl-box > p {
+  font-size: var(--font-size-15); font-weight: 300; color: var(--color-fontColor); line-height: 1.3;
+  text-indent: -15px; padding-left: 15px;
+  word-break: keep-all;
+}
+.modal-know .downupPopup-content > .cont-box-wrap .notes-box {
+  margin-top: 1.875rem;
+  padding: 1.25rem;
+  background-color: var(--color-light-silver);
+}
+.notes-box > ul {
+  margin-top: .4375rem;
+}
+.notes-box > ul > li {
+  font-size: var(--font-size-15); font-weight: 300;
+  color: var(--color-fontColor); line-height: 1.4;
+  word-break: keep-all;
+}
+.notes-box > ul > li.type-dot {
+  position: relative;
+  padding-left: 10px;  margin-top: .4375rem;
+}
+.notes-box > ul > li.type-dot:before {
+  content: "";
+  position: absolute; top: 7px; left: 0;
+  width: 3px; height: 3px;
+  border-radius: 100%;
+  background-color: var(--color-fontColor);
+}
+.notes-box > ul > li.type-dot > ul li {
+  text-indent: -8px;
+  padding-left: 8px; margin-top: 4px;
+  color: var(--color-fontColor);
+}
+.notes-box > ul > li.type-dot > ul li.type-number {
+  text-indent: -13 px;
+  padding-left: 13px; margin-top: 4px;
+  color: var(--color-fontColor);
+}
+.notes-box > ul > li.type-dot > ul li > ul li {
+  text-indent: -18px;
+  padding-left: 18px; margin-top: 4px;
+}
+
+
+
+/*********************************************************************************************
+              여행금지국가 Style css
+**************************************************/
+.modal-restrict .cont-box-wrap .restrict-box > strong {
+  display: block;
+  font-size: var(--font-size-18); font-weight: 700;
+  margin-top: 1.25rem;
+}
+.modal-restrict .cont-box-wrap .restrict-box > strong:first-child {
+  margin-top: 0;
+}
+.modal-restrict .cont-box-wrap .restrict-box > p {
+  font-size: var(--font-size-13); font-weight: 300; line-height: 1.4;
+   margin-top: .3125rem;
+}
+.modal-restrict .cont-box-wrap .restrict-box > p.caution {
+  color: var(--color-red);
+  text-indent: -8px; padding-left: 8px;
+  word-break: keep-all;
+}
+
+
+/*********************************************************************************************
+              이용약관 Style css
+**************************************************/
+.modal-terms-use .downupPopup-content > .cont-box-wrap > p {
+  font-size: var(--font-size-15); font-weight: 300; line-height: 1.4;
+  word-break: keep-all;
+}
+.cont-box-wrap > .terms-list {
+  margin: 1.25rem 0;
+}
+.cont-box-wrap > .terms-list.first {
+  margin: 0;
+}
+.cont-box-wrap > .terms-list:first-child {
+  margin-top: 0;
+}
+.cont-box-wrap > h3 {
+  font-size: var(--font-size-18);
+  font-weight: 700;
+  margin-top: 1.875rem;
+}
+.cont-box-wrap > h3.first {
+  margin-top: 0;
+}
+.cont-box-wrap > .terms-list > ul li {
+  font-size: var(--font-size-15); font-weight: 300;
+  color: var(--color-fontColor); line-height: 1.4;
+  word-break: keep-all;
+  padding-top: 5px;
+}
+.cont-box-wrap > .terms-list > ul li > strong {
+  display: block;
+  font-weight: 700;
+}
+.cont-box-wrap > .terms-list > ul li.type-circle {
+  text-indent: -18px;
+  padding-left: 18px;
+}
+.cont-box-wrap > .terms-list > ul li > ul li {
+  padding-left: 17px;
+}
+.cont-box-wrap > .terms-list > .type-number {
+  text-indent: -15px;
+  padding-left: 15px;
+}
+.cont-box-wrap > .terms-list > .type-dash {
+  text-indent: -10px;
+  padding-left: 10px;
+}
+
+
+
+
+/*********************************************************************************************
+              개인정보수집 및 이용 동의 Style css
+**************************************************/
+.modal-group .downupPopup-content {
+  height: 70.5vh !important;
+}
+
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 640px) {
+  /* 아이폰 Safari에서만 동작하는 CSS 코드를 작성합니다. */
+  .downupPopup-content .bottom-box {
+    /* margin: 1.25rem 1.25rem 3.25rem; */
+    margin: 1.25rem 1.25rem 1.25rem;
+  }
+}

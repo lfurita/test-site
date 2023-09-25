@@ -1,0 +1,1059 @@
+
+/********************************************************************
+              common area style css
+********************************************************************/
+.trip {
+  position: relative;
+  background-color: #CDD0D3;
+  width: 100%; height: 100vh;
+}
+.trip i {
+  font-size: 0;
+}
+.content {
+  position: relative;
+  display: flex; justify-content: center;
+  min-width: 1140px; height: calc(100vh - 75px);
+  margin: 0px auto;
+  overflow: hidden;
+}
+.cont-wrap {
+  position: relative; top: 10px;
+  width: 880px; height: calc(100% - 10px); margin-left: 10px;
+  display: flex;
+  flex-direction: column; justify-content: space-between;
+}
+.cont-wrap .conts-box {
+  width: 100%; height: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 0 30px 0 rgba(11, 105, 246, .1);
+  overflow-y: auto;
+}
+.cont-wrap .conts-box > form {
+  width: 100%;
+}
+.sort-box strong {
+  display: block;
+  font-size: var(--font-size-15); font-weight: 700;
+  color: var(--color-fontColor);
+  margin-top: 1.25rem;
+}
+.sort-box > h3 {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center;
+  font-size: var(--font-size-20); font-weight: 700;
+  color: var(--color-fontColor);
+}
+.sort-box > ul li:first-child > strong ,
+.sort-box > ul li:nth-child(2) > strong {
+  margin-top: 0;
+}
+.cont-wrap .button-wrap {
+  margin-top: 30px;
+}
+.cont-wrap .button-wrap a {
+  display: flex; align-items: center;
+}
+.cont-wrap .button-wrap a.prev {
+  width: calc(320px - 50px);
+  padding-left: 50px; 
+  justify-content: flex-start; 
+}
+.cont-wrap .button-wrap a.next {
+  width: calc(550px - 50px);
+  padding-right: 50px;
+  justify-content: flex-end;
+}
+
+
+/* 스크롤바 설정*/
+.cont-wrap .conts-box::-webkit-scrollbar {
+  width: 8px;
+}
+/* 스크롤바 막대 설정*/
+.cont-wrap .conts-box::-webkit-scrollbar-thumb {
+  background: var(--color-point); border: 1px solid var(--color-navy);
+  border-radius: 4px;
+}
+/* 스크롤바 뒷 배경 설정*/
+.cont-wrap .conts-box::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+
+/***************************************************** Header style css *********/
+.trip header {
+  position: relative;
+  width: 100%; height: 55px;
+  background-color: transparent; border-bottom: 0px;
+}
+.trip .head-wrap {
+  width: 1140px; height: 100%;
+  background-color: var(--color-white);
+  box-shadow: 0 0 30px 0 rgba(11, 105, 246, .10);
+}
+.trip header .head-wrap .inner {
+  display: flex;
+  flex-direction: row; justify-content: space-between; flex-wrap: nowrap; align-items: center;
+  height: 100%;
+}
+.trip header .head-wrap .inner h1 {
+  margin-left: 20px;
+}
+.trip header .head-wrap .inner > .button-wrap {
+  margin-right: 30px;
+}
+.trip header .head-wrap .inner > .button-wrap .end {
+  display: flex;
+  flex-direction: row; justify-content: center; align-items: center; flex-wrap: nowrap;
+  width: 86px; height: 35px; line-height: 35px;
+  background-color: var(--color-point); border-radius: 18px;
+  color: var(--color-white);
+}
+.trip header .head-wrap .inner > .button-wrap .end span {
+  color: var(--color-white);
+  margin-right: 5px;
+}
+.trip header .head-wrap .inner > .button-wrap .end i.icon-end {
+  display: inline-block;
+  width: 14px; height: 14px;
+  background-color: var(--color-white);
+  -webkit-mask: url('/new2023/img/trip/icon-close.svg?e') no-repeat center;
+          mask: url('/new2023/img/trip/icon-close.svg?e') no-repeat center;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+}
+
+
+/***************************************************** Menu style css *********/
+.menu-wrap {
+  position: relative; top: 10px;
+  width: 250px; height: calc(100vh - 50px);
+}
+.menu-wrap .inner {
+  display: flex;
+  flex-direction: column; justify-content: space-between; align-items: flex-start;
+  width: 100%; height: calc(100% - 35px);
+}
+.menu-wrap .inner .menu-box .sub-title {
+  display: flex;
+  flex-direction: column; justify-content: center; align-items: flex-start;
+  background:#16386C url('/new2023/img/trip/icon-back-v3.png') no-repeat;
+  background-size: auto 100%; background-position-x: right;
+  width: 250px; height: 120px;
+}
+.sub-title h2 {
+  font-size: var(--font-size-20); font-weight: 700; color: var(--color-white);
+  padding-left: 20px;
+  letter-spacing: -.0525rem;
+}
+.sub-title h2 > span {
+  font-size: var(--font-size-15); font-weight: 400; color: var(--color-white);
+  margin-left: 5px;
+}
+.sub-title a.info {
+  width: 100px; height: 30px;
+  font-size: var(--font-size-12); font-weight: 500; color: var(--color-white);
+  border-radius: 16px; border:1px solid rgba(255, 255, 255, .55);
+  margin-left: 20px; margin-top: 10px;
+  display: flex; justify-content: center; align-items: center;
+}
+.sub-title a.info:hover {
+  border-color: rgba(38, 255, 255, 1);
+  color: #26FFFF;
+}
+.sub-title a.info:active {
+  border-color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-navy); font-weight: 700;
+  box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0 );
+}
+.menu-wrap .inner .menu-box .pl-box {
+  background-color: var(--color-white);
+  border: 1px solid #BEC8DA;
+  margin-top: 10px;
+  padding: 20px;
+}
+.menu-wrap .inner .menu-box .pl-box .text-box {
+  display: none;
+}
+.menu-wrap .inner .menu-box .pl-box .text-box.on {
+  display: block;
+}
+.menu-wrap .inner .menu-box .pl-box strong {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  font-size: var(--font-size-15); font-weight: 700; line-height: 1.4 ;
+}
+.menu-wrap .inner .menu-box .pl-box a.modify {
+  display: none; 
+  width: 50px; height: 22px;
+  border: 1px solid var(--color-light-gray); border-radius: 12px; 
+}
+.menu-wrap .inner .menu-box .pl-box a.modify span {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100%; height: 100%; 
+  font-family: var(--font-family-malgun); font-size: var(--font-size-11); font-weight: bold;
+}
+.menu-wrap .inner .menu-box .pl-box a.modify.active {
+  display: block;
+}
+.menu-wrap .inner .menu-box .pl-box a.modify:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+.menu-wrap .inner .menu-box .pl-box a.modify:active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.menu-wrap .inner .menu-box .pl-box a.modify:hover span{
+  color: var(--color-blue);
+}
+.menu-wrap .inner .menu-box .pl-box a.modify:active span {
+  color: var(--color-white);
+}
+.menu-wrap .inner .menu-box .pl-box .text-cont {
+  font-size: var(--font-size-12); font-weight: 400;
+  color: var(--color-fontGray); line-height: 1.3;
+  text-indent: -40px; padding-left: 40px;
+  margin-top: 10px;
+}
+.menu-wrap .inner .menu-box .pl-box.active {
+  background-color: var(--color-point);
+}
+.menu-wrap .inner .menu-box .pl-box.active strong,
+.menu-wrap .inner .menu-box .pl-box.active .text-cont {
+  color: var(--color-white);
+}
+.menu-wrap .inner .menu-box .pl-box.active a.modify {
+  border-color: rgba(255, 255, 255, .55);
+  color: rgba(255, 255, 255, .85);
+}
+.menu-wrap .inner .menu-box .pl-box.active a.modify:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+.menu-wrap .inner .menu-box .pl-box.active a.modify:active {
+  border-color: var(--color-white); background-color: var(--color-white);
+  color: var(--color-blue);
+}
+
+.menu-wrap .inner .customer-box {
+  position: relative;
+   width: 100%;
+}
+.customer-box .tel-box > p {
+  font-size: var(--font-size-15); font-weight: 500;
+}
+.customer-box .tel-box > strong {
+  font-size: var(--font-size-42); font-weight: 700;
+  color: var(--color-blue); line-height: 1;
+}
+.customer-box .tel-box > .img {
+  position: absolute; top: -13px; left: 135px;
+}
+.menu-wrap .inner .customer-box .pl-box {
+  width: calc(100% -40px); height: auto;
+  background-color: var(--color-white);
+  border: 1px solid #BEC8DA;
+  margin-top: 10px;
+  padding: 20px;
+}
+.menu-wrap .inner .customer-box .pl-box strong {
+  display: flex;
+  flex-direction: row; justify-content: flex-start; align-items: center;
+}
+.menu-wrap .inner .customer-box .pl-box strong i.icon-question {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 24px; height: 24px;
+  border-radius: 100%; margin-left: 10px;
+  background-color: var(--color-blue); color: var(--color-white);
+  font-family: var(--font-family-nanmSq);
+  font-size: var(--font-size-15); font-weight: 7800;
+}
+
+
+
+/********************************************************************
+              trip Common area style css
+********************************************************************/
+.sc {
+  padding: 30px;
+  font-family: var(--font-family-malgun);
+}
+.sc .title-wrap {
+  display: flex;
+  flex-direction: row; justify-content: flex-start; align-items: center;
+}
+.sc .title-wrap.second {
+  margin-top: 3rem;
+}
+.sc .title-wrap h2 {
+  font-size: var(--font-size-24); font-weight: 700;
+  color: var(--color-fontColor); line-height: 1.4;
+  letter-spacing: -.125rem;
+}
+.sc .sort-box.first {
+  margin-top: 1rem;
+}
+.sc .sort-box {
+  margin-top: 1.875rem;
+}
+.sc .sort-box.third {
+  margin-top: 3.125rem;
+}
+.sc .sort-box.third:first-child {
+  margin-top: 1.875rem;
+}
+
+
+
+/********************************************************************
+              여행 정보 area style css
+********************************************************************/
+.sc.step1 .sort-box.second {
+  margin-top: 0rem;
+}
+.sc.step1 .sort-box.second h3.first {
+  margin-top: 1rem;
+}
+.sc.step1 .sort-box.second h3 {
+  margin-top: 3rem;
+}
+.sort-box.second h3 {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center;
+  width: auto; height: 29px;
+  font-size: var(--font-size-20); font-weight: 700;
+  color: var(--color-fontColor);
+  margin-top: 0;
+}
+.sort-box.second h3 a.delete {
+  display: inline-block;
+  width: 50px;
+  border-radius: 15px;
+  font-family: var(--font-family-malgun); font-size: var(--font-size-12); font-weight: bold;
+  margin-left: 20px;
+}
+.sc.step1 .sort-box:first-child {
+  margin-top: 0rem;
+}
+.sc.step1 .sort-box .radio-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center;
+  height: 32px;
+  margin-top: 10px;
+}
+.sc .sort-box .text-box {
+  margin-top: 1.25rem;
+}
+.sc .sort-box .text-box p {
+  font-family: var(--font-family-malgun); font-size: var(--font-size-15); font-weight: normal;
+  color: var(--color-fontColor); line-height: 1.4;
+  text-indent: -16px;
+  padding-left: 16px;
+  word-break: keep-all;
+}
+.sc .sort-box .text-box p span, .sc .sort-box .text-box p a {
+  font-family: var(--font-family-malgun); font-weight: bold;
+}
+.sc .sort-box .text-box .restrict {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+.sc .sort-box > ul {
+  display: flex;
+  flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: space-around;
+}
+.sc .sort-box > ul li {
+  position: relative;
+  width: 47%;
+  margin-left: 6%;
+  font-family: var(--font-family-malgun);
+}
+.sc .sort-box > ul li:nth-child(2n+1) {
+  margin-left: 0%;
+}
+.sort-box.second > ul li strong {
+  font-size: var(--font-size-15); font-weight: bold;
+  margin-top: .625rem;
+}
+.sc .sort-box > ul li input {
+  margin-top: 10px;
+}
+.sc .sort-box > ul li .select-box {
+  margin-top: 10px;
+  height: 36px; line-height: 35px;
+}
+.sc .sort-box > ul li .select-box select {
+  padding: 0 15px;
+}
+.sc .sort-box > ul li .select-box:after {
+  width: 12px; height: 12px;
+  background: var(--color-deep-gray);
+  -webkit-mask: url('/new2023/img/sub/icon-arrow.svg?e') no-repeat center;
+          mask: url('/new2023/img/sub/icon-arrow.svg?e') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+.sc .sort-box > ul li .select-box:hover:after {
+  background: var(--color-point);
+}
+.sort-box > ul li .date_picker {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap; flex-direction: row; justify-content: space-between;
+  width: 100%; height: 36px; margin-top: 10px;
+  border: 1px solid var(--color-light-gray); border-radius: 3px;
+  cursor: pointer;
+}
+.sort-box > ul li .date_picker input {
+  margin-top: 0px; padding-left: 15px;
+   width: 80%;
+}
+.sort-box > ul li .date_picker:before {
+  content: "";
+  position: absolute; top: 0; right: 0;
+  background-color: var(--color-snow);
+  width: 36px; height: 100%;
+}
+.sort-box > ul li .date_picker img {
+  position: absolute; top: 50%; right: 7px; z-index: 1;
+  transform: translateY(-50%);
+  width: 21px; height: 21px;
+}
+.sort-box > ul li .radio-box .travel.last {
+  margin-left: -1px;
+}
+.sc .button-wrap.center a.add {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 180px; height: 48px; line-height: 46px;
+  font-size: var(--font-size-15); font-weight: 500;
+}
+
+
+
+/********************************************************************
+              보험료 계산 결과 area style css
+********************************************************************/
+.plan-wrap input.radio {
+  display: none;
+}
+.plan-tab-menu {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center;
+  margin-top: 1.875rem;
+}
+.plan-tab-menu .tab {
+  display: flex; justify-content: center; align-items: center;
+  width: 33.3%; height: 72px;
+  font-size: var(--font-size-15); font-weight: 500;
+  background-color: var(--color-snow);
+  border-top: 1px solid var(--color-light-gray); border-bottom: 1px solid var(--color-light-gray);
+  border-left: 1px solid var(--color-light-gray);
+  cursor: pointer;
+}
+.plan-tab-menu .tab:last-child {
+  width: 33.4%;
+  border-right: 1px solid var(--color-light-gray);
+}
+.panel {
+  display:none;
+  animation: fadein .8s;
+}
+.panels > p.bill {
+  padding-top: 10px;
+  font-size: var(--font-size-15); font-weight: 300;
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+#advnc:checked ~ .panels #advnc-panel, #stndr:checked ~ .panels #stndr-panel,
+#stall:checked ~ .panels #stall-panel {
+  display:block
+}
+#advnc:checked ~ .plan-tab-menu #advnc-tab, #stndr:checked ~ .plan-tab-menu #stndr-tab, 
+#stall:checked ~ .plan-tab-menu #stall-tab {
+  background-color: var(--color-point);
+  color: var(--color-white);
+  border-color: var(--color-point);
+}
+.plan-wrap .panel .table {
+  margin-top: 10px;
+}
+#advnc:checked ~ .plan-tab-menu #advnc-tab .radio-box .choose span, 
+#stndr:checked ~ .plan-tab-menu #stndr-tab .radio-box .choose span, 
+#stall:checked ~ .plan-tab-menu #stall-tab .radio-box .choose span {
+  color: var(--color-white);
+}
+
+#advnc:checked ~ .plan-tab-menu #advnc-tab .radio-box .choose .check:before, 
+#stndr:checked ~ .plan-tab-menu #stndr-tab .radio-box .choose .check:before, 
+#stall:checked ~ .plan-tab-menu #stall-tab .radio-box .choose .check:before {
+  background-color: var(--color-white);
+}
+#advnc:checked ~ .plan-tab-menu #advnc-tab .radio-box .choose .check,
+#stndr:checked ~ .plan-tab-menu #stndr-tab .radio-box .choose .check,
+#stall:checked ~ .plan-tab-menu #stall-tab .radio-box .choose .check {
+  border-color: var(--color-white);
+}
+
+
+
+/********************************************************************
+              피보험자/계약자 정보 area style css
+********************************************************************/
+.sc.step3 {
+  padding: 30px;
+}
+.sc.step3 .title-wrap h2 span {
+  font-weight: 400;
+  color: var(--color-blue); letter-spacing: -.125rem;
+}
+.sort-box.third > ul li strong, 
+.sort-box.third > ul li strong:first-child {
+  display: block;
+  margin-top: 1.875rem;
+  font-size: var(--font-size-15); font-weight: 700;
+}
+.sc.step3 .sort-box.third > ul li:nth-child(1) strong, .sc.step3 .sort-box.third > ul li:nth-child(2) strong {
+  margin-top: 0;
+}
+.sc.step3 .sort-box.third strong > span {
+  font-size: var(--font-size-15); font-weight: 400;
+  color: var(--color-sky);
+}
+.sort-box.third > ul li .eng-name, .sort-box.third > ul li .twonum, 
+.sort-box.third > ul li .thirdum  {
+  font-size: 0;
+  display: flex;
+  align-items: center; justify-content: center;
+  margin-top: 10px;
+}
+.sort-box.third > ul li .eng-name input {
+  width: 130px;
+  margin-top: 0;
+}
+.sort-box.third > ul li .eng-name input:last-child {
+  width: calc(100% - 135px);
+  margin-left: 5px;
+}
+.sort-box.third > ul li .twonum input { 
+  width: 47%;
+  margin-top: 0;
+}
+.sort-box.third > ul li .twonum > span,
+.sort-box.third > ul li .thirdum > span {
+  display: flex;
+  align-items: center; justify-content: center;
+  width: 6%;
+  font-size: var(--font-size-13); font-weight: 500;
+}
+.sort-box.third > ul li.permanent .radio-box {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.sort-box.third > ul li .nationality {
+  position: absolute; top: 51px; left: 150px;
+  width: 235px;
+} 
+.sort-box.third > ul li .nationality .input02 {
+  height: 40px;
+}
+.sort-box.third > ul li .nationality .caption {
+  font-size: var(--font-size-12); font-weight: 400;
+  color: var(--color-red);
+  margin-top: 3px;
+}
+.sort-box.third > ul li.permanent .spanCaution {
+  font-size: var(--font-size-13); font-weight: 400;
+  color: var(--color-red);
+}
+.sort-box.third > ul li .thirdum span {
+  width: 5%;
+}
+.sort-box.third > ul li .thirdum .select-box, 
+.sort-box.third > ul li .thirdum input {
+  margin-top: 0;
+  width: 30%;
+}
+
+
+
+
+/********************************************************************
+              동의 & 약관 area style css
+********************************************************************/
+.sc.step4 {
+  padding: 30px;
+}
+.sc.step4 .title-wrap {
+  justify-content: space-between;
+}
+.sc.step4 .title-wrap .radio-box .terms {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 120px; height: 38px;
+}
+.sc.step4 .title-wrap .radio-box .terms label {
+  width:  100%; line-height: 38px; 
+  text-align: center;
+}
+.sc.step4 .list-box {
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  margin-top: 20px;
+}
+.sc.step4 .list-box:first-child {
+  margin-top: 30px;
+}
+.sc.step4:first-child .list-box .text-cont {
+  width: 50%;
+}
+.sc.step4:first-child .list-box .text-cont a.disease,
+.sc.step4:first-child .list-box .text-cont a.restrict {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+.list-box .text-cont {
+  width: calc(280px - 16px);
+  text-indent: -16px; padding-left: 16px;
+  line-height: 1.4;
+  font-size: var(--font-size-15); font-weight: 400;
+  color: var(--color-fontColor);
+}
+.list-box .text-cont .downlink {  
+  display: inline-block;
+  font-size: var(--font-size-11); font-weight: 500;
+  color: var(--color-blue); text-align: center;
+  width: 170px; height: 22px; line-height: 20px;
+  border: 1px solid var(--color-blue); border-radius: 11px; background-color: var(--color-white);
+  margin-left: 10px;
+}
+.list-box .text-cont .downlink:hover {
+  border-color: var(--color-navy);
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+.sc.step4 .agree-box .list-box .view-cont {
+  width: 100px;
+}
+.sc.step4 .agree-box .list-box .view-cont .linkMore {
+  display: block;
+  font-size: var(--font-size-11); font-weight: 500;
+  color: var(--color-fontColor); text-align: center;
+  width: 88px; height: 22px; line-height: 22px;
+  border: 1px solid var(--color-light-gray); border-radius: 11px; background-color: var(--color-white);
+}
+.sc.step4 .agree-box .list-box .view-cont .linkMore:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+.sc.step4 .agree-box .list-box .view-cont .linkMore:active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.sc.step4 .agree-box {
+  background-color: var(--color-snow);
+  border: 1px solid var(--color-light-gray);
+  padding: 30px;
+  margin-top: 20px;
+}
+.sc.step4 .agree-box .list-box {
+  display: flex;
+}
+.sc.step4 .agree-box .list-box:first-child {
+  margin-top: 0px;
+}
+.sc.step4 .agree-box .list-box .radio-box {
+  width: 338px;
+}
+.sc.step4 .list-box.accordion {
+  display: block;
+}
+.sc.step4 .list-box.accordion input {
+  display: none;
+}
+.sc.step4 .list-box.accordion .top-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+}
+.sc.step4 .list-box.accordion .top-box label.text-cont {
+  display: flex;
+  align-items: center; height: 21px;
+}
+.sc.step4 .list-box.accordion .top-box label.text-cont i.icon-accod {
+  display: inline-block;
+  width: 14px; height: 9px;
+  background: url('../img/trip/icon-accord-arrow.png?e') no-repeat;
+  background-size: 100%;
+  transition: all .3s;
+  margin-left: 10px;
+}
+.sc.step4 .list-box.accordion .cont-accord {
+  width: 100%; max-height: 0; font-size: 0;
+  overflow: hidden;
+}
+.sc.step4 .list-box.accordion .cont-accord .inner {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-light-gray); border-bottom: 1px solid var(--color-light-gray);
+  margin-top: 20px;
+}
+.sc.step4 .list-box.accordion .cont-accord .inner .box-list {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center;
+  align-items: center;
+  width: calc(100% - 40px); padding: 10px 20px 0;
+}
+.sc.step4 .list-box.accordion .cont-accord .inner .box-list:first-child {
+  padding-top: 20px;
+}
+.sc.step4 .list-box.accordion .cont-accord .inner .box-list:last-child {
+  padding-bottom: 20px;
+}
+.list-box.accordion .cont-accord .inner .box-list strong {
+  font-size: var(--font-size-13); font-weight: 400;
+  color: var(--color-fontColor);
+}
+.list-box.accordion .cont-accord .inner .box-list .radio-box .terms span {
+  font-size: var(--font-size-13); font-weight: 400;
+}
+.sc.step4 .list-box.accordion input:checked ~ .cont-accord {
+  max-height: 100vh;
+}
+.sc.step04 .list-box.accord input:checked ~ .accord-box > ul li {
+  padding: 10px 0 0px;
+}
+.sc.step4 .list-box.accordion input:checked ~ .top-box label.text-cont i.icon-accod {
+  transform: rotate(180deg);
+  transition: all .3s;
+}
+
+
+
+/********************************************************************
+              보험료 결제 area style css
+********************************************************************/
+.sc.step5 .table-wralp {
+  margin-top: 1.875rem;
+}
+.sc.step5 .box-total {
+  display: flex;
+  justify-content: space-between; align-items: center; flex-direction: row; flex-wrap: nowrap;
+  margin-top: 1.875rem; padding: 30px 50px;
+  background-color: var(--color-snow); border-radius: 10px;
+}
+.sc.step5 .box-total .price-box > span {
+  font-size: var(--font-size-15); font-weight: 500;
+  color: var(--color-fontColor);
+}
+.sc.step5 .box-total .price-box > .total-won {
+  font-size: var(--font-size-32); font-weight: 700;
+  color: var(--color-red);
+  margin-top: .625rem;
+}
+.sc.step5 .box-total .cont-right {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center;
+}
+.sc.step5 .box-total .cont-right .circle-box {
+  position: relative;
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center;
+  width: 150px; height: 150px;
+  background-color: var(--color-white); border-radius: 100%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .08);
+  margin-left: 10px;
+}
+.circle-box::before {
+  content: "";
+  position: absolute; top: 50%; left: 10px; right: 10px;
+  width: calc(100% - 10px - 10px); height: 1px;
+  background-color: rgba(0, 0, 0, .10);
+}
+.circle-box > strong {
+  font-size: var(--font-size-18); font-weight: 2500;
+  margin-bottom: 10px;
+}
+.circle-box > p {
+  font-size: var(--font-size-15); font-weight: 400; color: var(--color-fontGray);
+  margin-top: 10px;
+}
+
+
+
+/********************************************************************
+              가입완료 area style css
+********************************************************************/
+.sc.step6 .box-cont {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column; align-items: center; justify-content: center;
+}
+.sc.step6 .box-cont .img {
+  width: 220px; height: 220px;
+}
+.sc.step6 .box-cont .text-cont {
+  width: 485px;
+}
+.sc.step6 .box-cont .text-cont > h2 {
+  margin-top: 1.875rem;
+  font-size: var(--font-size-28); font-weight: 300;
+  text-align: center;
+  word-break: keep-all;
+}
+.sc.step6 .box-cont .text-cont > h2 > strong {
+  font-weight: 700;
+}
+.sc.step6 .box-cont .text-cont .text {
+  margin-top: .625rem;
+  font-size: var(--font-size-18); font-weight: 500;
+  text-align: center;
+  word-break: keep-all;
+}
+.sc.step6 .box-cont .banner-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: flex-start;
+  margin-top: 5rem;
+}
+.sc.step6 .box-cont .banner-box .box-bnnr {
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center;
+  width: 250px; height: 180px;
+  background-color: var(--color-snow);
+  margin-left: 15px;
+}
+.sc.step6 .box-cont .banner-box .box-bnnr:first-child {
+  margin-left: 0;
+}
+
+
+
+
+ 
+/********************************************************************
+              Table style css
+********************************************************************/
+.table {
+  width:100%;
+  border-collapse:collapse;
+  border-spacing:0px;
+}
+.table thead th, .table tbody th,
+.table tbody td {
+  font-family: var(--font-family-malgun);
+  font-size: var(--font-size-13); font-weight: normal;
+  line-height: 1.4; letter-spacing: -.0313rem;
+  padding: 8px 10px;
+  border: 1px solid #cecece;
+  vertical-align: middle; text-align: center;
+	word-break: keep-all;
+}
+.table thead th {
+  background-color: #e0e0e0;
+  color: var(--color-fontColor);
+  font-size: var(--font-size-15); font-weight: bold;
+}
+.table tbody th {
+  background-color: var(--color-snow);
+  font-weight: bold;
+}
+.table tbody th .tooltip {
+  position: relative; top: 4px; left: 2px;
+  display: inline-block;
+  margin: auto; width: 17px; height: 17px;
+  cursor: pointer;
+}
+.table tbody th .tooltip i.icon-tooltip {
+  position: absolute; top: 0;
+  display: block;
+  width: 16px; height: 16px;
+  font-size: 0;
+  background-color: #16386C;
+  -webkit-mask: url('../img/trip/icon-question.svg?e') no-repeat center;
+          mask: url('../img/trip/icon-question.svg?e') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+.tooltip .tooltip-content {
+  visibility: hidden;
+  position: absolute; bottom: 180%; left: 50%; z-index: 1;
+  width: 280px;
+  background-color: var(--color-navy); border-radius: 7px;
+  color: var(--color-white); text-align: center; line-height: 140%;
+  font-size: var(--font-size-15); font-weight: 100;
+  margin-left: -110px; padding: 15px 10px;
+}
+.tooltip .tooltip-content::after {
+  content: " ";
+  position: absolute; top: 100%; left: 50%;
+  margin-left: -50px;
+  border-width: 10px; border-style: solid;
+  border-color: var(--color-navy) transparent transparent transparent;
+}
+.tooltip .tooltip-content > p {
+  color: var(--color-white);
+}
+.tooltip:hover .tooltip-content {
+  visibility: visible;
+}
+
+.details {
+  width:100%;
+  border-collapse:collapse;
+  border-spacing:0px;
+  border-top: 3px solid var(--color-dark-gray);
+}
+.details tbody th, .details tbody td {
+  font-size: var(--font-size-13); font-weight: 400;
+  line-height: 1.4; letter-spacing: -.0313rem;
+  padding: 15px 10px;
+  border-bottom: 1px solid #cecece;
+  vertical-align: middle; text-align: center;
+	word-break: keep-all;
+}
+.details tbody th {
+  background-color: var(--color-light-silver);
+  font-weight: 500;
+}
+.details tbody th:first-child {
+  border-left: 0px;
+}
+.details tbody tr:last-child th, .details tbody tr:last-child td {
+  border-bottom: 1px solid var(--color-dark-gray);
+}
+
+
+
+/********************************************************************
+              동의 & 예아니오 radio check style css
+********************************************************************/
+.radio-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; align-items: center;
+}
+.radio-box .terms {
+  position: relative; user-select: none;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center;
+  padding-left: 27px; height: 18px;
+}
+.radio-box .terms:nth-child(2),
+.radio-box .terms:last-child {
+  margin-left: 25px;
+}
+.radio-box .terms input, .radio-box .travel input,
+.radio-box .choose input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio-box .terms label {
+  position: relative;
+  display: block;  line-height: 38px;
+  border: 1px solid var(--color-light-gray); border-radius: 20px;
+  color: var(--color-fontColor); font-size: var(--font-size-15); font-weight: 500;
+  cursor: pointer;
+}
+.radio-box .terms span {
+  line-height: 18px;
+}
+.radio-box .terms input:checked + label {
+  border-color: var(--color-point);
+  background-color: var(--color-point);
+  color: var(--color-white);
+}
+.check {
+  position: absolute; top: 0px; left: 0;
+  height: 18px; width: 18px;
+  border: 1px solid var(--color-silver); border-radius: 100%;
+  background-color: var(--color-white);
+}
+.terms:hover input ~ .check,
+.terms input:focus ~ .check {
+  background: var(--color-white);
+}
+.terms input:checked ~ .check {
+  border-color: var(--color-blue);
+}
+.terms input:checked:focus ~ .check {
+  border-color: var(--color-blue);
+}
+.check:before {
+  content: '';
+  position: absolute; top: 8px; left: .3125rem;
+}
+.check:after {
+  content: '';
+  position: absolute; top: 4px; left: .5730rem;
+}
+.terms input:checked ~ .check:before {
+  display: block;
+  width: 2px; height: 4px;
+  background-color: var(--color-blue);
+  transform: rotate(-45deg);
+}
+.terms input:checked ~ .check:after {
+  display: block;
+  width: 2px; height: 10px;
+  background-color: var(--color-blue);
+  transform: rotate(45deg);
+}
+.terms input:checked ~ span {
+  color: var(--color-blue);
+}
+
+.radio-box .travel {
+  position: relative;
+  user-select: none;
+  display: flex; 
+  align-items: center; flex-direction: row; flex-wrap: nowrap;
+  height: 40px; width: auto;
+}
+.radio-box .travel label {
+  display: flex; 
+  align-items: center;
+  font-size: var(--font-size-15); font-weight: 500;
+  color: var(--color-point);
+  border: 1px solid var(--color-point);
+  padding: 0px 20px; height: 38px;
+  cursor: pointer;
+}
+.radio-box .travel.first label {
+  border-radius: 5px 0 0 5px;
+}
+.radio-box .travel.last label {
+  border-radius: 0 5px 5px 0;
+}
+.radio-box .travel input:checked + label {
+  border-color: var(--color-point);
+  background-color: var(--color-point);
+  color: var(--color-white);
+}
+
+.radio-box .choose {
+  position: relative; user-select: none;
+  display: flex;
+  flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center;
+}
+.radio-box .choose span {
+  margin-top: 5px;
+}
+.radio-box .choose .check {
+  position: relative;
+  height: 18px; width: 18px;
+  border: 1px solid var(--color-gray); border-radius: 100%;
+  background-color: transparent;
+}
+.radio-box .choose .check:before {
+  content: '';
+  position: absolute; top: 4px; left: 4px;
+  width: 10px; height: 10px;
+  border-radius: 100%;
+}

@@ -40,7 +40,7 @@
     </footer>
 <!-- Footer end -->
 
-    <script type="text/javascript" src="/ubiz/js/design.js?v=<?=time()?>"></script>
+    <script type="text/javascript" src="/ubiz/js/design.js"></script>
     <script src="/ubiz/js/wow.min.js"></script>
     <script>
         // wow.js animation

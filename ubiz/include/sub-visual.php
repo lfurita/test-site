@@ -20,7 +20,7 @@
 <? elseif($menuNo[0]==1 && $menuNo[1]==2 && $menuNo[2]==2): ?>
 <div class="sub-visual insurance">
     <div class="inner">
-        <div class="sm-eng">Liability Insurance</div>
+        <div class="sm-eng">Fire / Property / Personal Property</div>
         <h2>배상책임보험</h2>
         <p>
             <span>필요한 기업보험이 어떤 보험인지 자세히 확인하시고</span>
@@ -39,6 +39,19 @@
         </p>
     </div>
 </div>
+<!-- /**** 근로자 재해 -->
+<? elseif($menuNo[0]==1 && $menuNo[1]==2 && $menuNo[2]==4): ?>
+<div class="sub-visual insurance">
+    <div class="inner">
+        <div class="sm-eng">Fire / Property / Personal Property</div>
+        <h2>근로자 재해</h2>
+        <p>
+            <span>필요한 기업보험이 어떤 보험인지 자세히 확인하시고</span>
+            <span>기업보험 비교를 신청해 보세요.</span>
+        </p>
+    </div>
+</div>
+
 
 <!-- /******************************** 마이유비즈 -->
 <? elseif($menuNo[0]==3): ?>
