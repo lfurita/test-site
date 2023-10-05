@@ -1,0 +1,400 @@
+@charset "utf-8";
+/* 
+   v1.0 | 20220516
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0;
+	font-size: 100%; font: inherit; font-family: 'Malgun Gothic', "맑은고딕", 'Roboto', "Noto Sans KR",  Dotum, sans-serif; line-height: 1.2;
+  letter-spacing: -.0344rem; color: var(--color-fontColor);
+	vertical-align: baseline;
+}
+html, body {
+  position: relative;
+  width: 100%; height: 100vh;
+}
+body.backg {
+  background-color: var(--color-snow);
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body { line-height: 1; position: relative; min-width: 1200px; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+div { display: block }
+article, aside, footer, header, hgroup, main, nav, section { display: block }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+  width: 100%;
+}
+address { display: block; }
+figcaption { display: block }
+hr {
+  display: block; overflow: hidden;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em; margin-block-end: 0.5em; margin-inline-start: auto; margin-inline-end: auto;
+  border-style: inset; border-width: 1px
+}
+map {
+  display: inline
+}
+img, video {
+  width: 100%;
+  height: auto;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+}
+video {
+  object-fit: contain;
+}
+video:-webkit-full-page-media {
+  margin: auto; position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  max-height: 100%; max-width: 100%;
+}
+img {
+  border-style: none;
+}
+button {
+  background: none;
+  border: 0;
+}
+strong {
+  display: block;
+  font-weight: 700; line-height: 1.4;
+}
+span {
+  display: inline-block;
+}
+p {
+  font-size: var(--fontsize-text-02); font-weight: 500;
+}
+
+/* form elements */
+form {
+  display: inline-block;
+  width: 100%;
+}
+:-webkit-any(table, thead, tbody, tfoot, tr) > form:-internal-is-html {
+  display: none !important;
+}
+label {
+  cursor: default;
+}
+legend {
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border: none
+}
+textarea {
+  width: 100%; height: 100%;
+  border: none;
+  resize: none;
+}
+input:read-only,
+textarea[readonly='readonly'] {
+  background-color: #EDEDED;
+}
+
+.clearfix:after {
+  content: " "; 
+  display: block; 
+  clear: both;
+}
+.inb {
+  font-size: 0;
+}
+.inb > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+h1 {
+  font-size: var(--fontsize-28); font-weight: 700;
+}
+h2 {
+  font-size: var(--fontsize-25); font-weight: 700;
+}
+
+b {
+  display: block;
+  font-weight: 700;
+}
+p {
+  font-size: var(--fontsize-12); font-weight: 500;
+  word-break: keep-all;
+}
+
+.mgT0 { margin-top: 0px !important; }
+.mgT10 { margin-top: 10px !important; }
+.mgT30 { margin-top: 30px !important; }
+
+.pdT5 { padding-top: 5px !important; }
+.pdT10 { padding-top: 10px !important; }
+
+.fc-point { color: var(--color-point); }
+.fc-red { color: var(--color-red); }
+.fc-blue { color: var(--color-blue); }
+.fc-sky { color: var(--color-sky); }
+.radius-5 { border-radius: 5px; }
+
+
+
+/******************************************************************
+           input & textarea Style Css 
+***********************/
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
+textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+  outline: none;
+  padding: 0;
+}
+input[type="number"] {
+  width: 0%;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* input search x 버튼 삭제 및 클리어 IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal {
+  display:none;
+}
+/* input search x 버튼 삭제 및 클리어 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+  display:none;
+}
+
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder { color: var(--color-fontSilver); }
+    ::-ms-input-placeholder { color: var(--color-fontSilver); }
+         ::-moz-placeholder { color: var(--color-fontSilver); }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent; }
+          input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+                  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent; }
+
+input {
+  vertical-align: middle;
+  outline: none; border:none;
+  border-radius: 0;
+}
+input:focus {
+  border-color: var(--color-point);
+}
+.inp01 {
+  width: 100%; height: 38px; line-height: 38px;
+  border:1px solid var(--color-ligthGray); border-radius: 0px;
+  background-color: var(--color-white);
+  padding:0 5%;
+  font-size: var(--fontsize-15); font-weight: 500;
+}
+
+/******************************************************************
+           checkbox Style Css 
+***********************/
+.radiobox {
+  position: relative;
+  margin-left: 15px;
+}
+.radiobox input {
+  height: 20px; width: 100%;
+  cursor: pointer;
+}
+.radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+.radio-custom-label {
+  position: relative;
+  display: flex; align-items: center;
+  cursor: pointer;
+}
+.radio-custom:checked + label {
+  color: var(--color-point);
+}
+.radio-custom + .radio-custom-label:before {
+  content: '';
+  display: flex; align-items: center;
+  background: var(--color-fontGray);
+  border: 2px solid var(--color-fontGray);
+  width: 16px; height: 16px;
+  padding: 2px; margin-right: 5px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+  border-color: var(--color-fontSilver);
+}
+.radio-custom:checked + :before {
+  background: var(--color-point);
+  border-color: var(--color-point);
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+
+
+/******************************************************************
+           selectBox Style Css 
+***********************/
+select { 
+  border-radius:0;          /* 아이폰 사파리 보더 없애기 */
+  /* 네이티브 외형 감추기 */ 
+  -webkit-appearance:none;  /* 화살표 없애기 for chrome*/ 
+     -moz-appearance:none;  /* 화살표 없애기 for firefox*/ 
+          appearance:none;  /* 화살표 없애기 공통*/
+  background: url('') no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ 
+  background-size: 0;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+  display: none;
+}
+select {
+  padding: 0 0 1px; padding-left: 1.25rem;
+  border: 0; border-radius: 0;
+  width: 100%;
+  font-size: var(--fontsize-15); font-weight: 500; line-height: 48px;
+  cursor: pointer;
+}
+select:focus, select:active {
+  outline: 0;
+  border-color: var(--color-point);
+}
+.select-box,
+.select-custom {
+  position: relative;
+  display: inline-block;
+  width: 100%; height: 100%;
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+.select-box {
+  border: 1px solid var(--color-ligthGray);
+}
+.select-custom:after,
+.select-box:after {
+  content: '';
+  position: absolute; top: 0; right: 15px; bottom: 0;
+  width: 18px; height: 18px;
+  background: var(--color-black);
+  -webkit-mask: url('../img/icon/icon-arrow-select.svg') no-repeat center;
+          mask: url('../img/icon/icon-arrow-select.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+  margin: auto;
+  pointer-events: none;
+}
+.select-custom:hover,
+.select-box:hover {
+  border: 1px solid var(--color-point);
+}
+.select-custom:hover:after,
+.select-box:hover:after {
+  background: var(--color-point);
+}
+
+
+
+
+/******************************************************************
+           root Style Css 
+***********************/
+:root {
+  /* font color style */
+  --color-fontColor:  #1e1e1e;
+  --color-fontGray:   #727272;
+  --color-fontSilver: #A5A5A5;
+
+  /* color style */
+  --color-foot:  #2C3440;
+  --color-point: #0B6CFF;
+
+  --color-black:    #050505;
+  --color-white:    #fff;
+
+  --color-ligthGray:   #d2d2d2;
+  --color-snow:        #f5f5f5;
+
+  --color-blue:     #0880EF;
+  --color-sky:      #64D0FF;
+  --color-aqua:     #0DFFF0;
+  --color-navyBlue: #003E9B;
+
+  --color-orange: #FF9015;
+  --color-red:    #FE3B1F;
+  --color-rgba25: rgba(255, 255, 255, .25);
+
+  /* font size style */
+    --fontsize-11: 11px;
+    --fontsize-12: 12px;
+    --fontsize-13: 13px;
+    --fontsize-15: 15px;
+    --fontsize-16: 16px;
+    --fontsize-25: 25px;
+    --fontsize-28: 28px;
+    --fontsize-42: 42px;
+
+  /* font family style */
+  --font-family-nosakr:   'Noto Sans KR', sans-serif;
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-malgun: 'Malgun Gothic', '맑은고딕', sans-serif;
+}
+
+/*********************************************************************************************
+              Mobile Style css
+                        *** 500미만 style ***
+*****************************/
+
+@media screen and (max-width: 1200px){
+  body { min-width: 100%; }
+  table {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:1024px) and (min-width:280px){
+  /********************** 해상도 공통 css */
+}
+
+@media only screen and (max-device-width: 999px) {
+  body { height: calc(100vh - 80px); }
+}

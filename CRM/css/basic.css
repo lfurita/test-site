@@ -133,45 +133,79 @@ i.icon-file {
 /********************************************************************
               pagination style css
 ********************************************************************/
- .pagination-box {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	   -ms-flex-pack: center;
-	-webkit-justify-content: center;
-	        justify-content: center;
- } 
-.blind {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  width: 1px; height: 1px; margin: -1px;
+
+/************************************* paginate style */
+.paginate {
   overflow: hidden;
-  font-size: 0;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;
+  width: 100%;
+  font-weight: 500; font-size: 0; text-align: center;
+  margin: 35px 0 25px;
 }
-.pagination-box .page-list {
+.paginate a {
+  position: relative; 
+  zoom: 1;
+  -webkit-box-sizing: border-box; box-sizing: border-box;
   display: flex;
   flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;
-  padding: 0 10px;
-  white-space: nowrap;
-  font-size: 0;
+  width: 27px; height: 26px;
+  border: 1px solid transparent; background-color: transparent; border-radius: 3px;
+  font-size: 14px; font-weight: normal;
+  line-height: 26px; color: var(--color-fontColor);
+  margin: 0 3px; padding: 0px;
 }
-.pagination-box .page-list .page-link  {
-  -webkit-box-sizing: border-box; box-sizing: border-box;
-  position: relative;
+.paginate a.active {
+  color: var(--color-point);
+  background: transparent;
+  border: 1px solid var(--color-point);
+}
+.paginate a.first, .paginate a.last,
+.paginate a.prev, .paginate a.next {
+  width: 27px; height: 26px;
+}
+.paginate a.prev {
+  margin-right: 10px;
+}
+.paginate a.next {
+  margin-left: 10px;
+}
+.paginate a i {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-fontColor);
+}
+.paginate a.first i.prev-arrow-double {
   display: block;
-  min-width: 28px; height: 28px;
-  border: 1px solid transparent; border-radius: 3px;
-  padding: 0 7px; font-size: 14px; font-weight: normal;
-  line-height: 26px;
-  color: var(--color-fontColor);
-  text-align: center;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-prev-arrow-double.svg?e') no-repeat center;
+          mask: url('../img/service/icon-prev-arrow-double.svg?e') no-repeat center;
 }
-.pagination-box .page.selected .page-link {
+.paginate a.last i.next-arrow-double {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-next-arrow-double.svg?e') no-repeat center;
+          mask: url('../img/service/icon-next-arrow-double.svg?e') no-repeat center;
+}
+.paginate a.prev i.prev-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-prev-arrow.svg?e') no-repeat center;
+          mask: url('../img/service/icon-prev-arrow.svg?e') no-repeat center;
+}
+.paginate a.next i.next-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-next-arrow.svg?e') no-repeat center;
+          mask: url('../img/service/icon-next-arrow.svg?e') no-repeat center;
+}
+.paginate a:hover {
   border-color: var(--color-point);
-  color: var(--color-point); font-weight: bold;
 }
+.paginate a:hover i {
+  background-color: var(--color-point);
+}
+
 
 
 

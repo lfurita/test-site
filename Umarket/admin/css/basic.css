@@ -1,0 +1,437 @@
+
+/********************************************************************
+              header style css
+********************************************************************/
+header {
+  position: absolute; top: 0; left: 0; z-index: 1;
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 75px;
+  background-color: var(--color-point);
+  padding: 0;
+}
+header > h1 {
+  margin-left: 280px;
+  color: var(--color-white);
+}
+header > .link-box {
+  display: flex; align-items: center;
+  margin-right: 30px;
+  height: 75px;
+}
+header > .link-box a.link-item {
+  position: relative;
+  display: block;
+  font-size: var(--fontsize-15); font-weight: 700;
+  color: var(--color-white);
+  padding: 0 26px;
+}
+header > .link-box a.link-item.logout {
+  color: #FFBD12;
+  padding-right: 0;
+}
+header > .link-box a.link-item:first-child:before {
+  content: "";
+  position: absolute; top: 1px; right: 0;
+  width: 1px; height: 14px;
+  background-color: rgba(0, 0, 0, .25);
+}
+header > .link-box a.link-item:last-child:before {
+  content: "";
+  position: absolute; top: 1px; left: 0;
+  width: 1px; height: 14px;
+  background-color: rgba(255, 255, 255, .25);
+}
+header > .link-box a.link-item:hover {
+  color: #12FCFC;
+}
+
+/********************************************************************
+              Menu Left style css
+********************************************************************/
+.menu-wrap {
+  position: absolute; top: 0; left: 0; z-index: 2;
+  width: 250px; height: 100vh;
+  background-color: var(--color-white);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+  border-top-right-radius: 10px;
+}
+.menu-wrap > .title {
+  width: 100%;
+  display: flex; justify-content: center;
+  font-size: var(--fontsize-28); font-weight: 700;
+  margin: 22px 0 0;
+}
+.menu-wrap > .gnb-box {
+  margin-top: 72px;
+  width: 100%;
+}
+.menu-wrap > .gnb-box > ul {
+  display: flex;
+  flex-direction: column; align-items: flex-end;
+}
+.menu-wrap > .gnb-box > ul li {
+  position: relative;
+  margin-left: 20px; margin-top: 10px;
+}
+.menu-wrap > .gnb-box > ul li:first-child {
+  margin-top: 0;
+}
+.menu-wrap > .gnb-box > ul li > a {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  height: 52px; width: 230px;
+  font-size: var(--fontsize-16); font-weight: 700;
+  padding-left: 30px; padding-right: 10px;
+}
+.menu-wrap > .gnb-box > ul li > a i {
+  display: flex;
+  width: 18px; height: 18px;
+  font-size: 0;
+  background-color: var(--color-fontColor);
+}
+.menu-wrap > .gnb-box > ul li.active > a {
+  color: var(--color-white);
+}
+.menu-wrap > .gnb-box > ul li:hover > a {
+  color: var(--color-white);
+}
+.menu-wrap > .gnb-box > ul li.active:before {
+  content: "";
+  position: absolute; top: 0; right: 0; z-index: -1;
+  width: 100%; height: 100%;
+  border-top-left-radius: 26px; border-bottom-left-radius: 26px;
+  background: linear-gradient(to left, #41D7CE 10%, #0B6CFF 90%);
+}
+.menu-wrap > .gnb-box > ul li:hover > a:before {
+  content: "";
+  position: absolute; top: 0; right: 0; z-index: -1;
+  width: 100%; height: 100%;
+  border-top-left-radius: 26px; border-bottom-left-radius: 26px;
+  background-color: var(--color-point);
+  animation-name: fadeInRight;
+  animation-duration: .2s;
+}
+.menu-wrap > .gnb-box > ul li.active:hover > a:before {
+  background: linear-gradient(to left, #41D7CE 10%, #0B6CFF 90%);
+  animation-name: none;
+}
+.menu-wrap > .gnb-box > ul li:hover > a i,
+.menu-wrap > .gnb-box > ul li.active > a i {
+  background-color: var(--color-white);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .75);
+}
+
+/************************************************ keyframes */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+
+
+/********************************************************************
+              footer style css
+********************************************************************/
+footer {
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+
+
+
+/********************************************************************
+              common icon style css
+********************************************************************/
+i.icon-add-arow {
+  -webkit-mask: url('../img/icon/icon-add-arow.svg') no-repeat center;
+          mask: url('..//img/icon/icon-add-arow.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-total-order {
+  -webkit-mask: url('../img/icon/icon-total-order.svg') no-repeat center;
+          mask: url('../img/icon/icon-total-order.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.ko-item {
+  display: block;
+  width: 12px; height: 12px;
+  background: url('../img/icon/icon-korea.png');
+  background-repeat: no-repeat;
+}
+i.eng-item {
+  display: block;
+  width: 12px; height: 12px;
+  background: url('../img/icon/icon-america.png');
+  background-repeat: no-repeat;
+}
+
+
+
+/*********************************************************************************************
+              common style css
+********************************************************************/
+.radius-10 {
+  border-radius: 10px;
+}
+.radius-5 {
+  border-radius: 5px;
+}
+.radius-3 {
+  border-radius: 3px;
+}
+.btn-box-wrap {
+  margin-top: 30px;
+}
+.btn-center-wrap {
+  display: flex;
+  justify-content: center; align-items: center;
+  margin-top: 30px;
+}
+.btn-center-wrap a {
+  width: 150px; height: 52px;
+  font-weight: 500;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.btn-center-wrap a:first-child,
+.btn-center-wrap a:nth-child(2n+1),
+.btn-center-wrap a:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+
+/*********************************************************************************************
+              Table Style css
+*****************************/
+table {
+  border-collapse: separate;
+}
+table tr th, table tr td {
+  font-size: var( --fontsize-12); font-weight: normal; color: var(--color-fontColor);
+  text-align: center;
+  border-bottom: 1px solid var(--color-ligthGray);
+  padding: 13px 5px;
+  vertical-align: middle;
+}
+table thead tr th {
+  background-color: #E8E8E8;
+  font-size: var( --fontsize-13); font-weight: bold;
+  border-top: 1px solid var(--color-ligthGray);
+}
+table thead tr th:first-child {
+  background-color: #E8E8E8;
+  border-radius: 10px 0 0 10px;
+  border-left: 1px solid var(--color-ligthGray);
+}
+table thead tr th:last-child {
+  border-right: 1px solid var(--color-ligthGray);
+  border-radius: 0 10px 10px 0;
+}
+table tr td.text-left {
+  text-align: left;
+}
+table tr.link-item {
+  cursor: pointer;
+}
+table tr.link-item:hover td {
+  background-color: #EEF5FF;
+}
+
+/************************************* paginate style */
+.paginate {
+  display: -webkit-box; display: -webkit-flex; display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+         -webkit-box-pack: center;
+            -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px; margin-bottom: 50px;
+}
+.blind {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px; height: 1px; margin: -1px;
+  overflow: hidden;
+  font-size: 0;
+}
+.paginate .page-list {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center;
+  padding: 0 14px;
+  white-space: nowrap;
+  font-size: 0;
+}
+.paginate .page {
+  width: 30px; height: 28px;
+}
+.paginate .page + .page {
+  margin-left: 6px;
+}
+.paginate .page-link {
+  position: relative;
+  -webkit-box-sizing: border-box; box-sizing: border-box;
+  display: flex; justify-content: center; align-items: center;
+  border: 1px solid transparent; border-radius: 5px;
+  font-size: 14px; font-weight: bold; line-height: 26px;
+  color: var(--color-fontColor);
+}
+.paginate .page.selected .page-link {
+  border-color: var(--color-point);
+  color: var(--color-point);
+}
+.paginate a {
+  position: relative;
+  width: 26px; height: 26px;
+  vertical-align: top;
+}
+.paginate a:before {
+  margin: 0px;
+  vertical-align: top;
+  content: '';
+}
+.paginate button[class^='button'] {
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 28px; height: 28px;
+  vertical-align: top;
+}
+.paginate button[class^='button']:before {
+	margin: 6px;
+	vertical-align: top;
+	content: '';
+}
+.paginate button[class^='button']:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.paginate .button-first, .paginate .button-prev {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+   -webkit-order: -1;
+           order: -1;
+}
+.paginate .button-next, .paginate .button-last {
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: 1;
+   -webkit-order: 1;
+           order: 1;
+}
+.paginate .button-first:before, .paginate .button-last:before {
+  background-image: url('../img/icon/icon-paginate-arrow.png?e');
+  background-repeat: no-repeat;
+  width: 10px; height: 10px;
+  display: inline-block;
+}
+.paginate .button-prev:before, .paginate .button-next:before {
+  background-image: url('../img/icon/icon-paginate-double.png?e');
+  background-repeat: no-repeat;
+  width: 10px; height: 10px;
+  display: inline-block;
+}
+.paginate .button-next:before, .paginate .button-last:before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.paginate .button-prev {
+  margin-left: 8px;
+}
+.paginate .button-next {
+  margin-right: 8px;
+}
+
+
+/*********************************************************************************************
+              UI Datepicker Style css
+*****************************/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: solid rgba(255, 255, 255, .55)!important;
+  border-width: 1px 0 0 1px!important;
+}
+.ui-datepicker td {
+  border: 1px solid #CCC !important;
+  padding: 0 !important
+}
+.ui-datepicker-calendar thead tr th span {
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+}
+.ui-widget-header {
+  background: #2d2d2d !important;
+  border: 0 !important
+}
+.ui-datepicker .ui-datepicker-title select {
+  background: #2d2d2d !important;
+  color: var(--color-white) !important;
+  font-size: 15px !important;
+}
+.ui-widget-header .ui-icon {
+  background-image: none !important;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin-top: 4px !important;
+}
+#ui-datepicker-div {
+  padding: 0;
+  width: 275px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  background: linear-gradient(20deg, #e2e2e2, #eeeeee) !important;
+}
+.ui-state-default {
+  font-size: var(--font-size-12);
+  font-weight: bold !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 33% !important;
+  padding-left: 22px !important;
+}
+.ui-datepicker th {
+  padding: 0em .3em 0.2em !important;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+.ui-button:hover, .ui-button:focus {
+  background: #1EB7AD !important;
+  box-shadow: inset 0px 0px 10px #32DACF, inset 0px 0px 20px #35e5f5 !important;
+  color: var(--color-white) !important;
+}
+.ui-datepicker table {
+  margin: 0 !important;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+  border: 0 !important;
+}
+
+/*Right Arrow*/
+.ui-datepicker .ui-datepicker-next span {
+  width: 0!important;
+  height: 0!important;
+  border-left: 10px solid white!important;
+  border-right: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+
+/*Left Arrow*/
+.ui-datepicker .ui-datepicker-prev span {
+  width: 0!important;height: 0!important;
+  border-right: 10px solid white!important;
+  border-left: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}

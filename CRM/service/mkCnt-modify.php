@@ -114,7 +114,12 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                     </li>
                     <li class="title">보험 상품</li>
                     <li>
-                        <div class="select-custom">
+                        <div class="search-item radius-5">
+                            <i class="icon-search">검색아이콘</i>
+                            <input type="search" class="input" placeholder="보험상품명">
+                            <button class="btnClear"></button>
+                        </div>
+                        <!--div class="select-custom">
                             <select name="" id="">
                                 <option value="">분류</option>
                                 <option value="" selected>심사</option>
@@ -130,7 +135,7 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                                 <option value="">계약완료</option>
                                 <option value="">취소</option>
                             </select>
-                        </div>
+                        </div-->
                     </li>
 
                     <li class="title">보험기간</li>
@@ -155,11 +160,11 @@ include $_SERVER['DOCUMENT_ROOT']."/CRM/include/header.php";
                 <ul>
                     <li class="title">계약자(고객) *</li>
                     <li>
-                    <div class="search-item radius-5">
-                        <i class="icon-search">검색아이콘</i>
-                        <input type="search" class="input" placeholder="홍길동">
-                        <button class="btnClear"></button>
-                    </div>
+                        <div class="search-item radius-5">
+                            <i class="icon-search">검색아이콘</i>
+                            <input type="search" class="input" placeholder="홍길동">
+                            <button class="btnClear"></button>
+                        </div>
                     </li>                    
                     <li class="title">피보험자</li>
                     <li>
